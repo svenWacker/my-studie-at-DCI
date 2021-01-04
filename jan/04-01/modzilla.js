@@ -39,7 +39,8 @@ const b=2; // Throws SyntaxError: Missing initializer in const declaration
 // Example 1
 // Only y is hoisted
 
-x = 1; // Initialize x, and if not already declared, declare it - but no hoisting as there is no var in the statement.
+var x = 1; // Initialize x, and if not already declared, declare it - but no hoisting as there is no var in the statement.
+var y = 2;
 console.log(x + " " + y); // '1 undefined'
 // This prints value of y as undefined as JavaScript only hoists declarations
 var y = 2; // Declare and Initialize y
@@ -50,4 +51,4 @@ var y = 2; // Declare and Initialize y
 c = 'Cran'; // Initialize a
 d = 'berry'; // Initialize b
 
-console.log(a + "" + b); // 'Cranberry'
+console.log(c + "" + d); // 'Cranberry'
