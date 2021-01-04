@@ -19,7 +19,8 @@ console.log(name, "is", age, "in", year);
 //console.log ("in");
 //console.log (year);
 
-let isMarried = 0 < 1;
+let isMarried = 0;
+console.log(isMarried0==1);
 let programmingLanguage = "JavaScript";
 let isFun = 1;
 console.log(isFun==1);
@@ -35,10 +36,4 @@ let speedCheck = 50;
 speedCheck <= 50
     ? console.log("You're going too fast")
     : console.log("You're driving below the speed limit, Oma");
-
-
-
-
-
-
 

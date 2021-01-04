@@ -28,7 +28,7 @@ person > 16 ? console.log("Go Party"): console.log("Stay Home");
 
 let drive = 55;
 drive > 18
-    ? console.log("Yeah lets's drive now")
+    ? console.log("Yeah let drive now")
     : console.log("Nope sorry");
 //comparison operators (===, !==, >=, <=, >, <)
 console.log(1 == 1);
