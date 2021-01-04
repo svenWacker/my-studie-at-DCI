@@ -106,3 +106,60 @@ console.log(text2);
 //
 let partOfStr = longStr.substring(4, 7);
 console.log(partOfStr);
+
+// substring
+let longText = "This is a long text";
+let subStr = longText.substring(longText.length - 4);
+console.log(subStr);
+
+// slice
+let sliceStr = longText.slice(5);
+console.log(sliceStr);
+
+// ` ` 
+let firstUserName = "Zain";
+let lastUserName = "something";
+let add = "xxx str, 123345 Berlin";
+// console.log("Hi I am "+ firstUserName + ", I live in "+ add + ". My last name "+ lastUserName + ".");
+console.log(
+    `Hi I am ${firstUserName}, I live in${add}. My last name is ${lastUserName}
+    `);
+
+
+var globalVar = "This is global";
+console.log(globalVar);
+globalVar = "This is global plus";
+
+function sub(x, y) {
+    let local = "This is local";
+    console.log(local);
+    console.log(globalVar);
+        return x -y;
+        //return "Sven";
+    }
+    console.log(sub(10, 4));
+
+// ++ += -- -=
+let num1 = 1;
+//num1 = num1 +1; == num1 += 1;
+num1 += 1;
+console.log(num1);
+
+let num2 = 1;
+//num1 = num1 +1; == num1 += 1;
+num2 -= 1;
+console.log(num2);
+
+//Increment
+let w = 10;
+w++;
+++w;
+console.log(w);
+
+//Decrement
+let q = 10;
+q--;
+--q;
+console.log(q);
+
+
