@@ -4,6 +4,7 @@ function catName(name) {
   }
   
   catName("Tiger");
+
   
   /*
   The result of the code above is: "My cat's name is Tiger"
@@ -17,14 +18,14 @@ function catName(name) {
  The result of the code above is: "My cat's name is Chloe"
  */
 
-//console.log(num); // Returns undefined, as only declaration was hoisted, no initialization has happened at this stage
+console.log(num); // Returns undefined, as only declaration was hoisted, no initialization has happened at this stage
 var num; // Declaration
 num = 6; // Initialization
-console.log(num); 
+//console.log(num); 
 
-
-console.log(num); // Throws ReferenceError exception
-num = 6; // Initialization
+num1 = 7; // Initialization
+console.log(num1); // Throws ReferenceError exception
+num1 = 7; // Initialization
 
 // Example with let:
 //a = 1; // initialization.
