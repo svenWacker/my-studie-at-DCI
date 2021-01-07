@@ -125,3 +125,16 @@ console.log(test4);
 // Declare a variable named isDog. If true, print ‘pat, pat’ and if not, print ‘find me a dog to pat!’
 let isDog = false;
 console.log(isDog? "past, pat" : "find me a dog to pat!");
+
+function roughScale(x, base) {
+    const parsed = parseInt(x, base);
+    if (isNaN(parsed)) { return 0; }
+    return parsed * 100;
+  }
+  
+  console.log(roughScale(' 0xF', 16));
+  // expected output: 1500
+  
+  console.log(roughScale('321', 2));
+  // expected output: 0
+
