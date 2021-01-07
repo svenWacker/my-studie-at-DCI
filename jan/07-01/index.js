@@ -68,9 +68,64 @@ console.log(result.toFixed(num));
 // tutoring payment
 console.log(165 / (4 * 4));
 
-// random
-console.log(Math.random() * 10);
-console.log(Math.floor(Math.random() * 10)+1);
-console.log(Math.floor(Math.random() * 49)+1);
+// Math.random
+// 0 -100 -> 0 - 99
+//
+// console.log(Math.random() * 10);
+// console.log(Math.floor(Math.random() * 10)+1);
+// console.log(Math.floor(Math.random() * 49)+1);
 
-console.log(1);
+// ==
+// ! == 1 -> true
+// 1 != 44 -> true
+console.log(1 == 1);
+console.log(1 != 10);
+console.log(1 == 1 && 10 == 10);
+// Logic gates
+// and &&
+// or ||
+console.log(1 == 1 || ( 1 == 1 && 10 == 10));
+
+let bool1, bool2, bool3;
+bool1 = true;
+bool2 = false;
+console.log(bool1 && bool2 ? "cool" : "not cool");
+console.log(bool1 || bool2 ? "cool" : "not cool");
+
+// === ==
+let numInStr = "10";
+let numb = 10;
+console.log(numInStr == numb ? "cool" : "not cool"); // comparing value
+console.log(numInStr === numb ? "cool" : "not cool"); // comparing value and form
+// 1 = true;
+// 0 = false;
+// "" = false;
+// "something" = true;
+// true = true;
+// false = false;
+
+// Create a program that prints a random integer from 1 - 6.
+console.log(Math.floor(Math.random() * 6)+1);
+
+
+  console.log();
+  console.log("PI");
+  console.log(Math.PI);
+  console.log("Radius in mm");
+  let radius = 5;
+
+  console.log(radius);
+  
+  function calculateCircumference(radius) {
+    return 2 * Math.PI * radius;
+  }
+  console.log("Circumference in mm:");
+  console.log(calculateCircumference(radius));
+  console.log(calculateCircumference(radius).toFixed(2));
+
+  function calculateSurface(radius) {
+    return Math.PI * radius*radius;
+  }
+  console.log("Surface in mm²:");
+  console.log(calculateSurface(radius));
+  console.log(calculateSurface(radius).toFixed(2));
