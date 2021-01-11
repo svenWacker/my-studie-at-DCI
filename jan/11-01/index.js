@@ -257,3 +257,16 @@ for(let i = 1; i <=4; ){
 }
 console.log(text);
 
+// Count Occurences
+
+const countOccurrences = (str, chr)=>{
+    let strIntoArr =str.split("");
+    let count = 0;
+    for(let i = 0;i<strIntoArr.length; i++){
+        if (strIntoArr[i] == chr){
+        count++;
+        }
+    }
+    return count;
+};
+console.log(countOccurrences("this is a string", "i"));
