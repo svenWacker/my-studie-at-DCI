@@ -124,8 +124,11 @@ console.log(Math.floor(Math.random() * 6)+1);
   console.log(calculateCircumference(radius).toFixed(2));
 
   function calculateSurface(radius) {
-    return Math.PI * radius*radius;
+    //return Math.PI * radius*radius;
+    return Math.PI * Math.pow(radius, 2);
   }
   console.log("Surface in mm²:");
   console.log(calculateSurface(radius));
   console.log(calculateSurface(radius).toFixed(2));
+console.log(Math.pow(2, 31));
+
