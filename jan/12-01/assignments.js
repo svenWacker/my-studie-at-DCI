@@ -128,17 +128,14 @@ for(let i = 1; i <=4;i++){
 *
 */
 console.log("Second shape");
-text = "";
-for(let i = 4; i>=1;i--){
-    text += "*" + "";
-    // console.log(text);
-    for(let j =4; j>=i; j--){
-        console.log(text);
-        //text += "T" + "";
-    }
-    console.log();
+text = '';
+for (let i = 4; i >= 1; i--) {
+  i < 4 ? text += '\n': null;
+  for (let j = 1; j <= i; j++) {
+    text += '*';
+  }
 }
-
+console.log(text);
 /*Third shape
 1
 12
@@ -158,18 +155,6 @@ for(let i = 1; i <=5;i++){
 /*Bounce: Forth shape
 Be creative and show us your Artistic side
 */
-console.log("----------");
-text = "";
-let countNum = 0;
-for(let i = 1; i <=4; ){
-    text += i + " ";
-    if (countNum !== 0 && countNum % 3 ===0){
-        i++
-        countNum = 0;
-    }
-    countNum++;
-}
-console.log(text);
 
 console.log("--------Exercise-7------");
 /*  Finish the following function so it outputs looks like this:
@@ -178,12 +163,8 @@ console.log("--------Exercise-7------");
 123
 1234
 12345
-text = "";
-for(let i = 1; i <=5;i++){
-    text += i + "";
-    for(let j =1; j<=i; j++){
-    }
-    console.log(text);
+
+
  const numbersCount = () => {
   for (let i = 0; i <= 5; i++) {
     text += i + "";
@@ -211,7 +192,13 @@ let storeArr= ["milk", "eggs", "cheese", "butter"];
 inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
-
+const inventoryCheck = food => {
+    let storeArr= ["milk", "eggs", "cheese", "butter"];
+    console.log(storeArr.includes(food));
+  }
+  
+  inventoryCheck("cheese");
+  inventoryCheck( "ham");
 console.log("--------Exercise-9------");
 // Extra work :)
 // create a repo for this app. we are coming later to it :)
