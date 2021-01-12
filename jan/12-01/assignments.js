@@ -106,7 +106,7 @@ countOccurrences("How many ooo's in this text do we have?", "o");
 //console.log(countOccurrences("this is a string", "i"));
 
 
-console.log("\n--------Exercise-6------");
+console.log("\n--------Exercise-6------\n");
 /*  draw this shapes in your console
 First shape
 T
@@ -151,29 +151,55 @@ for(let i = 1; i <=5;i++){
     console.log(text);
 }
 
-
 /*Bounce: Forth shape
 Be creative and show us your Artistic side
 */
+console.log("Bounce: Forth shape");
+function displayPyramid(n) { 
+  for (let i = 0; i < n; i++) { 
+    let str = '';
+    // let str1 = '';
+    // let str2 = '';
+    for (let j = 1; j < n-i; j++) { 
+      str = str + ' '; 
+    } 
+    for (let k = 1; k <= (2*i+1); k++) { 
+      str = str + '*';
+      // str1 = str1 + '*';
+    // }
+    // for (let k = n; k <= (2*i+1); k--) { 
+    //     str2 = str2 + '*'; 
+    } 
+    console.log(str);
+    // console.log(str1); 
+    // console.log(str2); 
+  } 
+} 
+displayPyramid(3);
+displayPyramid(6);
+displayPyramid(12);
 
-console.log("--------Exercise-7------");
-/*  Finish the following function so it outputs looks like this:
+console.log("\n--------Exercise-7------\n");
+/* Finish the following function so it outputs looks like this:
 1
 12
 123
 1234
 12345
-
-
- const numbersCount = () => {
-  for (let i = 0; i <= 5; i++) {
-    text += i + "";
-    for (let j = 1; j <= i; j++) {
-        // something
+*/
+ 
+let num5 = "";  
+function numbersCount(num5){ 
+  for(let i = 1; i <=num5;i++){
+      text += i + "";
+      for(let j =1; j<=i; j++){
+      }
+      console.log(text);
     }
-      // something
   }
-};
+numbersCount(5);
+
+/*
 numbersCount();
 Bonus: create another function by doing some changes to the previous function in order to have the following outputs :
   12345
@@ -181,7 +207,16 @@ Bonus: create another function by doing some changes to the previous function in
   123
   12
   1
-*/
+let num5 = "";  
+function numbersCount(num5){ 
+  for(let i = 1; i <=num5;i++){
+      text += i + "";
+      for(let j =1; j<=i; j++){
+      }
+      console.log(text);
+    }
+  }
+numbersCount(5);
 
 console.log("--------Exercise-8------");
 /* create a function should that checks if a store contains a specific product in it's inventory.
@@ -192,13 +227,15 @@ let storeArr= ["milk", "eggs", "cheese", "butter"];
 inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
+console.log("\n--------Exercise-8------\n");
 const inventoryCheck = food => {
     let storeArr= ["milk", "eggs", "cheese", "butter"];
     console.log(storeArr.includes(food));
   }
-  
   inventoryCheck("cheese");
   inventoryCheck( "ham");
+
+
 console.log("--------Exercise-9------");
 // Extra work :)
 // create a repo for this app. we are coming later to it :)
