@@ -188,16 +188,18 @@ console.log("\n--------Exercise-7------\n");
 12345
 */
  
-let num5 = "";  
-function numbersCount(num5){ 
-  for(let i = 1; i <=num5;i++){
-      text += i + "";
+
+function numbersCount(){
+  text = "";  
+  for(let i = 1; i <=5;i++){
+    //i < 4 ? text += '\n': null;
+    text += i + "";
       for(let j =1; j<=i; j++){
       }
       console.log(text);
     }
-  }
-numbersCount(5);
+  };
+numbersCount();
 
 /*
 numbersCount();
@@ -207,18 +209,21 @@ Bonus: create another function by doing some changes to the previous function in
   123
   12
   1
-let num5 = "";  
-function numbersCount(num5){ 
-  for(let i = 1; i <=num5;i++){
-      text += i + "";
+*/
+  
+function numbersCountBack(){ 
+  text = "";
+  for(let i = 5; i >=1;i--){
+      text += "\n";
       for(let j =1; j<=i; j++){
+      text += j;
       }
-      console.log(text);
     }
-  }
-numbersCount(5);
+    console.log(text);
+  };
+numbersCountBack();
 
-console.log("--------Exercise-8------");
+// console.log("--------Exercise-8------");
 /* create a function should that checks if a store contains a specific product in it's inventory.
 for example:
 let storeArr= ["milk", "eggs", "cheese", "butter"];
@@ -228,7 +233,7 @@ inventoryCheck("cheese") returns true
 inventoryCheck( "ham") returns false 
 */
 console.log("\n--------Exercise-8------\n");
-const inventoryCheck = food => {
+function inventoryCheck(food){
     let storeArr= ["milk", "eggs", "cheese", "butter"];
     console.log(storeArr.includes(food));
   }
