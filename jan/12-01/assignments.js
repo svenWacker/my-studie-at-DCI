@@ -48,7 +48,7 @@ let age = 0;
 let snack = 0;
 let snackSum = 0;
 function calcLifetimeSupply(age, snack){
-    snackSum = (100 + age) * snack * 365;
+    snackSum = (100 - age) * snack * 365;
     snackSumInt = new Intl.NumberFormat('ja-JP').format(snackSum);
     console.log(`The snack company should provide you with ${snackSumInt} units,\nuntil you are a ripe old age of 100.\nHappy snacking!\n`);
 }
