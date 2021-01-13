@@ -8,9 +8,8 @@ isLEQZero(10);
 
 const dogAge = (dogYear) => {
     const humanYear = dogYear * 7;    ;
-    return console.log(`Your doggy is ${humanYear} years old in dog years!`);
-    //return `Your doggy is ${humanYear} years old in dog years!`;
-};
-dogAge(4);
-dogAge(10);
-dogAge(8);
+    return `Your doggy is ${humanYear} years old in dog years!`
+    };
+console.log(dogAge(4));
+console.log(dogAge(10));
+console.log(dogAge(8));
