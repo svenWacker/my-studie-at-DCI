@@ -69,31 +69,72 @@ console.log(firstName, age);
 
 // Create a program that capitalizes the first letter of each element in an array of names. Examples:
 // [“matt”, “sara”, “lara”] ➞ [“Matt”, “Sara”, “Lara”]
+// const names1 = ["matt", "sara", "lara"];
+// [“samuel”, “MARIA”, “luke”, “mary”] ➞ [“Samuel”, “Maria”, “Luke”, “Mary”]
+// const names2 = ["samuel", "MARIA", "luke", "mary"];
+// [“Cynthia”, “Karen”, “Jane”, “Carrie”] ➞ [“Cynthia”, “Karen”, “Jane”, “Carrie”]
+// const names3 = ["Cynthia", "Karen", "Jane", "Carrie"];
+// for (let i = 0; i < names1.length; i++) {
+//   console.log(names1[i][0].toUpperCase() + names1[i].slice(1));
+// }
+// for (let i = 0; i < names2.length; i++) {
+//   console.log(names2[i][0].toUpperCase() + names2[i].slice(1).toLowerCase());
+// }
+// for (let i = 0; i < names3.length; i++) {
+//   console.log(names2[i][0].toUpperCase() + names3[i].slice(1));
+// }
+
+// [“matt”, “sara”, “lara”] ➞ [“Matt”, “Sara”, “Lara”]
 const names1 = ["matt", "sara", "lara"];
 // [“samuel”, “MARIA”, “luke”, “mary”] ➞ [“Samuel”, “Maria”, “Luke”, “Mary”]
 const names2 = ["samuel", "MARIA", "luke", "mary"];
 // [“Cynthia”, “Karen”, “Jane”, “Carrie”] ➞ [“Cynthia”, “Karen”, “Jane”, “Carrie”]
 const names3 = ["Cynthia", "Karen", "Jane", "Carrie"];
-for (let i = 0; i < names1.length; i++) {
-  console.log(names1[i][0].toUpperCase() + names1[i].slice(1));
-}
-for (let i = 0; i < names2.length; i++) {
-  console.log(names2[i][0].toUpperCase() + names2[i].slice(1).toLowerCase());
-}
-for (let i = 0; i < names3.length; i++) {
-  console.log(names2[i][0].toUpperCase() + names3[i].slice(1));
-}
+const capatalize = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1).toUpperCase();
+  }
+  return arr;
+};
+console.log(capatalize(names1));
+console.log(capatalize(names2));
+console.log(capatalize(names3));
+
 // Create an array of city names. Loop through the array and add the city names to a string. Examples:
 // [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome”.
-const cities = ["Berlin", "Paris", "Prague", "Rome"];
-for (let i = 0; i < cities.length; i++) {
-  console.log(cities[i][0].toUpperCase() + cities[i].slice(1));
-}
+// const cities = ["Berlin", "Paris", "Prague", "Rome"];
+// console.log(`"${cities[0]},  ${cities[1]}, ${cities[2]},  ${cities[3]}."`);
+// for (let i = 0; i < cities.length; i++) {
+
+const arrayToStr = (arr) => {
+  let str = "";
+  for (i = 0; i < arr.length; i++) {
+    str += arr[i];
+    if (i == arr.length - 1) {
+      str += ".";
+    } else {
+      str += ", ";
+    }
+  }
+  return str;
+};
+console.log(arrayToStr(["Berlin", "Paris", "Prague", "Rome"]));
+
+//   console.log(cities[i][0].toUpperCase() + cities[i].slice(1));
+// }
 // [Maria, Mike, Paul, Doven] ➞ expected output: “Hello Maria! Hello Mike! Hello Paul! Hello Doven!”
 const names5 = ["Maria", "Mike", "Paul", "Doven"];
 for (let i = 0; i < names5.length; i++) {
   console.log(`Hello ${names5[i]}! with index: ${i}`);
 }
+
+//const names5 = ["Maria", "Mike", "Paul", "Doven"];
+const hallo = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(`Hello ${arr[i]}! with index: ${i}`);
+  }
+};
+hallo(names5);
 // Create a program that changes a given array by
 // adding 1 to each odd integer and subtracting 1 from each even integer.
 // Examples:
@@ -107,3 +148,13 @@ const numes2 = [6, 9, 10, 20];
 for (let i = 0; i < numes2.length; i++) {
   console.log(`${numes2[i] - 1}`);
 }
+
+const oddOrEven = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2) {
+      console.log(arr[i] - 1);
+    } else {
+      console.log(arr[i] + 1);
+    }
+  }
+};
