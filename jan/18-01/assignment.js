@@ -94,3 +94,16 @@ const names5 = ["Maria", "Mike", "Paul", "Doven"];
 for (let i = 0; i < names5.length; i++) {
   console.log(`Hello ${names5[i]}! with index: ${i}`);
 }
+// Create a program that changes a given array by
+// adding 1 to each odd integer and subtracting 1 from each even integer.
+// Examples:
+// [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
+const numes1 = [3, 5, 2, 4];
+for (let i = 0; i < numes1.length; i++) {
+  console.log(`${numes1[i] + 1}`);
+}
+// [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+const numes2 = [6, 9, 10, 20];
+for (let i = 0; i < numes2.length; i++) {
+  console.log(`${numes2[i] - 1}`);
+}
