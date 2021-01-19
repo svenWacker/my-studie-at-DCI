@@ -1,7 +1,7 @@
 console.log("---2021-01-19---");
 
 const names = ["Zain", "Nancy", "Olga"];
-const smileys = ["😎", "🤓", "🥳"];
+// const smileys = ["😎", "🤓", "🥳"];
 // .length
 // to get the number of elements in an array
 console.log(names.length);
@@ -96,3 +96,7 @@ console.log(add);
 const num = [0, 1, 2, 3, 4, 5];
 let shallowNum = num.slice(2, 4);
 console.log(shallowNum);
+
+const smileys = ["😎", "🤓", "🥳"];
+let otherArr = smileys.slice(0, 2);
+console.log(otherArr);
