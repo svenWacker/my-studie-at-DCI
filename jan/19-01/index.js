@@ -94,9 +94,22 @@ shallowCopy.push("Sila");
 console.log(shallowCopy);
 console.log(add);
 const num = [0, 1, 2, 3, 4, 5];
-let shallowNum = num.slice(2, 4);
+let shallowNum = num.slice(2, 4); //2
 console.log(shallowNum);
 
 const smileys = ["😎", "🤓", "🥳"];
 let otherArr = smileys.slice(0, 2);
 console.log(otherArr);
+
+let originalArray = [
+  "JavaScript",
+  "will",
+  "turn",
+  "your",
+  "dreams",
+  "into",
+  "reality",
+];
+let shallowCopyOg = originalArray.slice(3, 5);
+console.log(originalArray);
+console.log(shallowCopyOg);

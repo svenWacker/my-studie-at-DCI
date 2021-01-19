@@ -31,7 +31,38 @@ const findGreatest = (arrNum, num) => {
   }
   return result.join(", ");
 };
-
 console.log(findGreatest([3, 4, 5], 4));
 console.log(findGreatest([10, 20, 30], 12));
 console.log(findGreatest([0, 10, 3], 4));
+
+// const xyz = (x, y, z) => {
+//     let result;     // = [];
+//     for ...
+//     return result;
+// }
+
+// AEIOU:
+// Vowels. Create a function that takes a string in its parameters
+// and counts the number of vowels (i.e. in English, “a, e, i, o, u”) in the string.
+// i.e. findVowels(“this is a string”) ➞ 4
+
+const findVowels = (str) => {
+  let vowelsCount = 0;
+  let newArr = str.toString();
+  //loop through the string
+  for (let i = 0; i <= newArr.length - 1; i++) {
+    //if a vowel, add to vowel count
+    if (
+      newArr.charAt(i) == "a" ||
+      newArr.charAt(i) == "e" ||
+      newArr.charAt(i) == "i" ||
+      newArr.charAt(i) == "o" ||
+      newArr.charAt(i) == "u"
+    ) {
+      vowelsCount += 1;
+    }
+  }
+  return console.log(`NO of vowels: ${vowelsCount}`);
+};
+findVowels("this is a string");
+findVowels("Hi my name is Sven");
