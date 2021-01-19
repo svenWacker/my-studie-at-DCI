@@ -68,3 +68,38 @@ const findVowels = (strArr) => {
 };
 findVowels("this is a string");
 findVowels("Hi my name is Sven");
+
+
+// A set is a collection of unique items. 
+// A set can be formed from an array by removing all duplicate items. 
+// Create a program which transforms an array into a set of unique values. 
+// See the examples below. Example:
+// [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
+// [1, 6, 6, 9, 9] ➞ [1, 6, 9]
+// [2, 2, 2, 2, 2, 2] ➞ [2]
+// [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
+
+const remDub = (numArr) => {
+    let result =[];
+    return numbers.indexOf(value) === index;
+});
+
+// print remDub array
+console.log(remDub([1, 4, 4, 7, 7, 7]);
+// [1, 6, 6, 9, 9];
+// [2, 2, 2, 2, 2, 2];
+// [5, 10, 15, 20, 25];
+// array.filter((item, index) => {
+//     console.log(
+//       // a. Item
+//       item,
+//       // b. Index
+//       index,
+//       // c. indexOf
+//       array.indexOf(item),
+//       // d. Condition
+//       array.indexOf(item) === index,
+//     );
+  
+//     return array.indexOf(item) === index;
+//   });
