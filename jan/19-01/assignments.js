@@ -69,37 +69,66 @@ const findVowels = (strArr) => {
 findVowels("this is a string");
 findVowels("Hi my name is Sven");
 
-
-// A set is a collection of unique items. 
-// A set can be formed from an array by removing all duplicate items. 
-// Create a program which transforms an array into a set of unique values. 
+// A set is a collection of unique items.
+// A set can be formed from an array by removing all duplicate items.
+// Create a program which transforms an array into a set of unique values.
 // See the examples below. Example:
 // [1, 4, 4, 7, 7, 7] ➞ [1, 4, 7]
 // [1, 6, 6, 9, 9] ➞ [1, 6, 9]
 // [2, 2, 2, 2, 2, 2] ➞ [2]
 // [5, 10, 15, 20, 25] ➞ [5, 10, 15, 20, 25]
 
-const remDub = (numArr) => {
-    let result =[];
-    return numbers.indexOf(value) === index;
-});
-
 // print remDub array
-console.log(remDub([1, 4, 4, 7, 7, 7]);
+// console.log(remDub(1, 4, 4, 7, 7, 7);
 // [1, 6, 6, 9, 9];
 // [2, 2, 2, 2, 2, 2];
 // [5, 10, 15, 20, 25];
-// array.filter((item, index) => {
-//     console.log(
-//       // a. Item
-//       item,
-//       // b. Index
-//       index,
-//       // c. indexOf
-//       array.indexOf(item),
-//       // d. Condition
-//       array.indexOf(item) === index,
-//     );
-  
-//     return array.indexOf(item) === index;
-//   });
+const array = [1, 6, 6, 9, 9];
+// [5, 10, 15, 20, 25];
+
+const resultArr = array.filter((data, index) => {
+  return array.indexOf(data) === index;
+});
+// console.log(resultArr(1, 6, 6, 9, 9));
+console.log(resultArr);
+
+// Dictionary. (take your time on this pls )
+// also as tip you can use .includes()
+// Create a function that takes an initial string and an array of words,
+// and returns a filtered array of the words that start with the same letters as the initial string.
+// Notes:
+// If none of the words match, return an empty array.
+// Keep the filtered array in the same relative order as the original array of words.
+// Examples:
+
+const dictionary = (str, arr) => {
+  let result = [];
+  let userInput = str.toLowerCase();
+  for (let i = 0; i < arr.length; i++) {
+    let currentValue = arr[i].toLowerCase();
+
+    if (currentValue.includes(userInput)) {
+      result.push(currentValue);
+    }
+  }
+  return result;
+};
+console.log(dictionary("bu", ["button", "breakfast", "border"])); // ➞ [“button”]
+console.log(dictionary("tri", ["triplet", "tries", "trip", "piano", "tree"])); // ➞ [“triplet”, “tries”, trip”]
+console.log(dictionary("beau", ["pastry", "delicious", "name", "boring"])); // ➞ []
+
+const dictionary2 = (str, arr) => {
+  let result = [];
+  let userInput = str.toLowerCase();
+  for (let i = 0; i < arr.length; i++) {
+    let currentValue = arr[i].toLowerCase();
+    let shortStr = currentValue.substring(0, userInput.length);
+    if (shortStr == userInput) {
+      result.push(currentValue);
+    }
+  }
+  return result;
+};
+console.log(dictionary2("bu", ["button", "breakfast", "border"])); // ➞ [“button”]
+console.log(dictionary2("tri", ["triplet", "tries", "trip", "piano", "tree"])); // ➞ [“triplet”, “tries”, trip”]
+console.log(dictionary2("beau", ["pastry", "delicious", "name", "boring"])); // ➞ [
