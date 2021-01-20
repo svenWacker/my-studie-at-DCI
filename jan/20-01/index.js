@@ -11,8 +11,10 @@ const arr2 = ["Good", "Day"];
 // new Array
 const arr3 = new Array();
 console.log(arr3);
-//.of()
 
+//.of()
+let newArr = Array.of(1, 44, 55, 6);
+console.log(newArr);
 // .sort()
 // to sort the elements in an array
 // will use the UTF-16 code
