@@ -125,3 +125,5 @@ switch (userKidsNumber) {
   default:
     console.log("Enter a number between 1 and 12");
 }
+
+// loops, case
