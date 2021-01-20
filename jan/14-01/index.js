@@ -126,3 +126,5 @@ console.log(names[arrPlace]);
 const numArr = [22, 52, 6544, 455, 67, 7853];
 console.log(numArr[numArr.length - 1]);
 // for loop
+
+// methods from bool, Math, str
