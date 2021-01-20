@@ -113,3 +113,5 @@ let originalArray = [
 let shallowCopyOg = originalArray.slice(3, 5);
 console.log(originalArray);
 console.log(shallowCopyOg);
+
+// copy, fakecopy
