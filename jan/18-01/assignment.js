@@ -135,6 +135,7 @@ const hallo = (arr) => {
   }
 };
 hallo(names5);
+
 // Create a program that changes a given array by
 // adding 1 to each odd integer and subtracting 1 from each even integer.
 // Examples:
@@ -148,13 +149,25 @@ const numes2 = [6, 9, 10, 20];
 for (let i = 0; i < numes2.length; i++) {
   console.log(`${numes2[i] - 1}`);
 }
-
+// DRY
+// const oddOrEven = (arr) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2) {
+//       console.log(arr[i] - 1);
+//     } else {
+//       console.log(arr[i] + 1);
+//     }
+//   }
+// };
+// better:
 const oddOrEven = (arr) => {
+  let currentValue;
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2) {
-      console.log(arr[i] - 1);
+    currentValue = arr[i];
+    if (currentValue % 2) {
+      console.log(currentValue - 1);
     } else {
-      console.log(arr[i] + 1);
+      console.log(currentValue + 1);
     }
   }
 };

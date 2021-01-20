@@ -64,7 +64,7 @@ const passwordGen = () => {
   let pw ="";
   let pwLength = 30;
   const pwChar = "abcdefghijklmnopqrstuvwxyzäöüABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ0123456789!§%&/()=?<>@€$#*+-_°^";
-  for (let i = 0; i <=30; i++) {
+  for (let i = 0; i <=pwLength; i++) {
     pw += pwChar.charAt(Math.floor(Math.random() * pwChar.length));
   }
   console.log(pw);
