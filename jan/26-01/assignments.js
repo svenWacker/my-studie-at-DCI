@@ -23,8 +23,13 @@ console.log(howManyArgs("better")); // ---> 1
 
 // Write a function which accepts any amount of numbers
 // and return the sum of their addition
-const sum = (...nums) => {nums.map(number => number+};
-    //reduce(a,b)=>a+b,0));
+const sum = (...nums) => {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result = +nums[i];
+  }
+  return result;
+};
 console.log(sum(1)); // ---> 1
 console.log(sum(1, 15)); // ---> 16
 console.log(sum(25, 25, 20)); // ---> 70
@@ -32,7 +37,14 @@ console.log(sum(25, 25, 20)); // ---> 70
 // Bonus: Write a function which accepts any amount of numbers
 // and returns the average.
 // e.g
-// console.log(average(0)) ---> 0
-// console.log(average(1, 2)) ---> 1.5
-// console.log(average(1, 3, 6, 10)) ---> 5
-// console.log(average(12, 14, 16)) ---> 14
+const average = (...nums) => {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result = +nums[i];
+  }
+  return result / nums.length;
+};
+console.log(average(0)); // ---> 0
+console.log(average(1, 2)); // ---> 1.5
+console.log(average(1, 3, 6, 10)); // ---> 5
+console.log(average(12, 14, 16)); // ---> 14
