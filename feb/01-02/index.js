@@ -157,3 +157,42 @@ console.log(all);
     console.log(`Your savings: ${totalSave}`);
   }
 })(45, 60, 10000, 10);
+
+// if .. else
+let fat = false;
+if (fat) {
+  console.log(`Please eat less!`);
+} else {
+  console.log(`Eat something`);
+}
+// ternary operator
+fat ? console.log(`Please eat less!`) : console.log(`Eat something`);
+console.log(fat ? `Please eat less!` : `Eat something`);
+
+// trim()
+let str = "   Hello   ";
+console.log(str);
+console.log(str.trim());
+// trimEnd()
+console.log(str.trimEnd());
+// trimStart()
+console.log(str.trimStart());
+// startsWith
+let text = "My name is Sven";
+console.log(text.startsWith("Your"));
+console.log(text.startsWith("My"));
+// endsWith
+console.log(text.endsWith("."));
+console.log(text.endsWith(""));
+// charAT()
+let chr = "sven";
+//chr = "aria";
+console.log(chr);
+console.log(chr.charAt(0));
+console.log(chr[0]);
+// arr[i][0]
+const arr = [`Sven`, `Maria`];
+console.log(arr[1][0] + arr[0][2]);
+// charCodeAt()
+console.log(chr.charCodeAt(0) - 96);
+console.log("sn".charCodeAt());
