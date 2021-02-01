@@ -126,7 +126,8 @@ console.log(all);
 // How much money will she have saved until she retires?
 // Output: $30000
 
-const retireCalc = (currentAge, retireAge, monthWage, percent) => {
+//const retireCalc =(currentAge, retireAge, monthWage, percent) => {
+((currentAge, retireAge, monthWage, percent) => {
   if (currentAge >= retireAge) {
     console.log(`You’re already retired!`);
   } else {
@@ -138,9 +139,10 @@ const retireCalc = (currentAge, retireAge, monthWage, percent) => {
       `years to work: ${yearsLeft}, month to work: ${monthLeft}, your savings: ${totalSave}`
     );
   }
-};
+  // };
+})(45, 60, 10000, 20);
 (() => {})();
-retireCalc(45, 60, 10000, 20);
+//retireCalc(45, 60, 10000, 20);
 
 ((currentAge, retireAge, monthlyWage, percent) => {
   if (currentAge >= retireAge) {
