@@ -105,6 +105,10 @@ var all = 3;
 })();
 console.log(all);
 
+(function (w, d, $) {
+  // body
+})((window = 0), (document = 0), (jQuery = 0));
+
 // Write a function that accepts several parameters and calculates the number of money
 // that will have been saved as pension until a person retires.
 // The function should be self invoked and should have the following parameters:
@@ -196,6 +200,7 @@ console.log(arr[1][0] + arr[0][2]);
 // charCodeAt()
 console.log(chr.charCodeAt(0) - 96);
 
+// assignment Seasons in on line:
 const checkSeasons = (str) => {
   const months = [
     "december",
@@ -212,37 +217,23 @@ const checkSeasons = (str) => {
     "november",
   ];
   const seasons = ["Winter", "Spring", "Summer", "Autumn"];
-  // let lowerStr = str.toLowerCase(); //.split(" ");
-  // let month = 0;
-  // let result;
-  // for (let i = 0; i < months.length; i++) {
-  //   if (months[i].includes(lowerStr)) {
-  //     return (months[i] = month);
-  //   }
-  //   if ((month = 11 || 0 || 1)) {
-  //     result = `${seasons[0]}`;
-  //   } else if ((month = 2 || 3 || 4)) {
-  //     result = `${seasons[1]}`;
-  //   } else if ((month = 5 || 6 || 7)) {
-  //     result = `${seasons[2]}`;
-  //   } else if ((month = 8 || 9 || 10)) {
-  //     result = `${seasons[3]}`;
-  //   } else;
-  // }
-  // return console.log(result);
+
   const currentSeason = (monthName) => {
     return seasons[Math.floor(months.indexOf(monthName) / 3)];
-    // console.log((months.indexOf(monthName)== ([0,1,2])? seasons[0] : null);
   };
   let month = str
     .toLowerCase()
     .split(" ")
     .filter((word) => months.includes(word))
     .join("");
-  console.log(month);
+  // console.log(month);
   return month == ""
     ? `No month in text`
-    : `you have entered${month}, which is in ${currentSeason(month)}`;
+    : `you have entered ${month}, which is in ${currentSeason(month)}`;
 };
 console.log(checkSeasons("Today is may the 14th."));
 console.log(checkSeasons("Today is january the 27th."));
+
+// common character codes UTF-32 UTF-16  UTF-8  ASCII   A 00001111
+
+// ASCII = American Standard Code for Information Interchange
