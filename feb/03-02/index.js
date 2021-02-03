@@ -208,3 +208,45 @@ cc(3);
 cc(7);
 cc("K");
 cc("A");
+
+// Setup
+var testObj = {
+  hat: "ballcap",
+  shirt: "jersey",
+  shoes: "cleats",
+};
+var hatValue = testObj.hat; // Change this line
+var shirtValue = testObj.shirt; // Change this line
+console.log(hatValue);
+console.log(shirtValue);
+
+// Setup
+var testObj = {
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water",
+};
+var entreeValue = testObj["an entree"]; // Change this line
+var drinkValue = testObj["the drink"]; // Change this line
+console.log(entreeValue);
+console.log(drinkValue);
+
+var testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas",
+};
+var playerNumber = 16; // Change this line
+var player = testObj[playerNumber]; // Change this line
+console.log(testObj[playerNumber]);
+playerNumber = 19;
+console.log(testObj[playerNumber]);
+
+var myDog = {
+  name: "Coder",
+  legs: 4,
+  tails: 1,
+  friends: ["freeCodeCamp Campers"],
+};
+myDog.name = "Happy Coder";
+console.log(myDog.name);
