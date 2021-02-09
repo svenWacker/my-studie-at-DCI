@@ -112,7 +112,12 @@ console.log(objStudent(student));
 //   Merge. Create a function that takes two objects as its parameters and merges them together into a new object.
 //   Example
 
-//   let first = {firstName: "John"}
-//   let last = {lastName: "Smith"}
+let first = { firstName: "John" };
+let last = { lastName: "Smith" };
+
 //   Expected output:
 //   {firstName: "John", lastName: "Smith"}
+// var fullName = { ...first, ...last };
+// console.log(fullName);
+const fullName = Object.assign({}, first, last);
+console.log(fullName);
