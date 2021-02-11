@@ -198,8 +198,13 @@ console.log(chr[0]);
 const arr = [`Sven`, `Maria`];
 console.log(arr[1][0] + arr[0][2]);
 // charCodeAt()
+chr = "a";
 console.log(chr.charCodeAt(0) - 96);
-
+//
+const icons = "☃★♲";
+console.log(icons.codePointAt(1));
+console.log(icons.charCodeAt(1));
+//
 // assignment Seasons in on line:
 const checkSeasons = (str) => {
   const months = [

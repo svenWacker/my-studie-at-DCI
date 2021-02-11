@@ -95,30 +95,29 @@ const toCamelCase = (str) => {
 };
 console.log(toCamelCase("cool_fun_stuff"));
 // hackerSpeak
-
-const hackerSpeak = (str) => {
-  let strToArr = str.split();
-  let result = strToArr.map((item, i) => {
-    i == "a"
-      ? item
-      : (item[i] =
-          "4" || i == "i"
-            ? item
-            : (item[i] =
-                "1" || i == "o"
-                  ? item
-                  : (item[i] =
-                      "0" || i == "e"
-                        ? item
-                        : (item[i] =
-                            "3" || i == "s" ? item : (item[i] = "5")))));
-  });
-  return result.join();
-};
-console.log(hackerSpeak("javascript is cool"));
-console.log(hackerSpeak("programming is fun"));
-console.log(hackerSpeak("become a coder"));
-console.log();
+// const hackerSpeak = (str) => {
+//   let strToArr = str.split();
+//   let result = strToArr.map((item, i) => {
+//     i == "a"
+//       ? item
+//       : (item[i] =
+//           "4" || i == "i"
+//             ? item
+//             : (item[i] =
+//                 "1" || i == "o"
+//                   ? item
+//                   : (item[i] =
+//                       "0" || i == "e"
+//                         ? item
+//                         : (item[i] =
+//                             "3" || i == "s" ? item : (item[i] = "5")))));
+//   });
+//   return result.join();
+// };
+// console.log(hackerSpeak("javascript is cool"));
+// console.log(hackerSpeak("programming is fun"));
+// console.log(hackerSpeak("become a coder"));
+// console.log();
 
 const hackerSpeak2 = (statement) => {
   const leet = { a: 4, b: 3, i: 1, o: 0, s: 5 };
@@ -128,3 +127,5 @@ const hackerSpeak2 = (statement) => {
   return statement.split("").map(speak).join("");
 };
 console.log(hackerSpeak2("javascript is cool"));
+
+// odds and even

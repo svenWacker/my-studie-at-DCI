@@ -83,16 +83,23 @@ let person = {
 // };
 
 const objPerson = (obj) => {
-  var new_obj = {};
+  var newObj = {};
   for (var prop in obj) {
     if (obj.hasOwnProperty(prop)) {
-      new_obj[obj[prop]] = prop;
+      newObj[obj[prop]] = prop;
     }
   }
-
-  return new_obj;
+  return newObj;
 };
 console.log(objPerson(person));
+
+const reverseObject = (obj) => {
+  var newObj = {};
+  for (var prop in obj) {
+    newObj[obj[prop]] = prop;
+  }
+  return newObj;
+};
 
 // function objPerson(obj) {
 //   Object.keys(obj).reduce(function (obj, key) {
@@ -106,3 +113,8 @@ console.log(objPerson(person));
 // Examples:
 // { a: 1, b: 2, c: 3 } ➞ [[“a”, “b”, “c”], [1, 2, 3]]
 // {key: true} ➞ [[“key”], [true]]
+
+const twoArrFromAnObj = (obj) => {
+  const keysArr = Object.keys(obj);
+  const keysArr = Object.keys(obj);
+};

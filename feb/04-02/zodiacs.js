@@ -134,6 +134,7 @@ function zodiac(yearStr) {
         { signName: "Not real day!", from: "1232" },
         { signName: "empty", from: "1232" },
       ];
+      // Extra Protection
       // if (this.birthday > 31 || this.birthMonth>12){
       //   return `This mis not a valid date`
       // }

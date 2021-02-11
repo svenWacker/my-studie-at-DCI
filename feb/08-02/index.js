@@ -144,4 +144,19 @@ const person = [
 // }
 const [userName] = person;
 console.log(userName);
+
 // for of
+let board = [
+  [1, 2, 3],
+  ["quick", "brown", "fox", "jumped", "over", "lazy", "dog"],
+  [true, false],
+];
+
+const printedData = [];
+const getData = board.map((i) => {
+  return i.map((j) => {
+    printedData.push(j);
+  });
+});
+
+console.log(printedData.join(", "));
