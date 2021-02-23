@@ -1,3 +1,7 @@
+:root {
+  /*root setup*/
+}
+
 body {
   background-color: orange;
   background-image: url("./tulips.jpeg");
@@ -25,17 +29,17 @@ li a {
   font-size: medium;
 }
 
-nav ul {
+/* nav ul {
   background-color: rgba(104, 130, 113, 0.618);
-}
+} */
 
 #job {
   color: steelblue;
 }
 
-#home {
+/* #home {
   color: violet;
-}
+} */
 
 h1,
 h2,
@@ -54,7 +58,7 @@ h2 {
 h1 {
   font-size: 24px;
   /* Never do this in your life */
-  /*margin-top: 400px;*/
+  /**/
   margin-right: 20px;
   margin-bottom: 10px;
   margin-left: 200px;
@@ -62,4 +66,60 @@ h1 {
 
 h2 {
   font-size: 18px;
+}
+
+section {
+  /* very good one*/
+  /* view width*/
+  width: 50vw;
+  /* view height*/
+  height: 50vh;
+}
+article {
+  width: 80%;
+  height: 50%;
+  font-size: 1rem;
+}
+#main-text {
+  color: teal;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: center;
+  text-transform: capitalize;
+  text-indent: 2vw;
+  text-decoration: none;
+  font-family: "Dancing Script", cursive, Verdana, sans-serif;
+  /*16px *2 = 32px*/
+  font-size: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  background-color: navajowhite;
+}
+a:visited,
+a:link {
+  color: orange;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+nav ul li a:hover {
+  background-color: gray;
+  color: orangered;
+}
+form {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+}
+.img {
+  width: 10rem;
+  height: 8rem;
+  /* float: left; */
+}
+article {
+  display: clear;
 }
