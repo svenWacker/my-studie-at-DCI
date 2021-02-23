@@ -1,0 +1,48 @@
+body {
+  background-color: orange;
+}
+
+p {
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  /*Soon we will practice*/
+  font-size: larger;
+  font-style: normal;
+  font-weight: bold;
+}
+
+li a {
+  color: orangered;
+  font-size: medium;
+}
+nav ul {
+  background-color: aquamarine;
+}
+#job {
+  color: blue;
+}
+#home {
+  color: violet;
+}
+.same {
+  background-color: yellow;
+}
+
+h1,
+h2,
+strong,
+.same {
+  color: cadetblue;
+}
+h1,
+h2 {
+  color: blue;
+  font-family: Helvetica;
+  font-weight: normal;
+  font-weight: bold;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 24px;
+}
