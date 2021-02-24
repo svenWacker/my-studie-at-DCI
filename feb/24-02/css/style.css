@@ -23,33 +23,48 @@ input {
 input:hover {
   background-color: lightcyan;
 }
-.rectangle {
-  background-color: blue;
+div {
   width: 3rem;
-  height: 6rem;
-  border: black 1px solid;
+  height: 3rem;
+  /* display: inline-block; */
+}
+.rectangle {
+  background-color: lightblue;
+  width: 6rem;
+  /* border: black 1px solid; */
   border-radius: 0;
 }
 .triangle {
-  background-color: white;
-  width: 0px;
+  /* background-color: salmon; */
+  width: 0;
+  height: 0;
   border-left: 0rem dotted transparent;
   border-right: 5rem solid transparent;
   border-bottom: 5rem solid orange;
-  /* border: black 1rem solid; */
-  /* border-radius: 0; */
 }
 .square {
   background-color: green;
-  width: 5rem;
-  height: 5rem;
-  border: black 1px solid;
+  /* border: black 1px solid; */
   border-radius: 0;
 }
 .circle {
   background-color: yellow;
-  width: 4rem;
-  height: 4rem;
-  border: black 1px solid;
-  border-radius: 4rem;
+  /* border: black 1px solid; */
+  border-radius: 50%;
 }
+.draw {
+  background-color: lightcoral;
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  transform: rotatez(30deg);
+}
+.some {
+    background-color: grey;
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    position: relative;
+    top: 3vh;
+    box-shadow: 5px 5px 10px grey;
+    transform: rotate(20deg);
