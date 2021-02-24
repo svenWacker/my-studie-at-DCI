@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
+}
+:root {
+}
+h1 {
+  font-family: "Akaya Telivigala";
+}
+.moon {
+  background-color: lightsteelblue;
+  width: 3rem;
+  height: 3rem;
+  border: black 2px solid;
+  border-radius: 0;
+}
+input {
+  border: none;
+  outline: none;
+  background-color: powderblue;
+  border-radius: 5px;
+}
+input:hover {
+  background-color: lightcyan;
+}
+.rectangle {
+  background-color: blue;
+  width: 3rem;
+  height: 6rem;
+  border: black 1px solid;
+  border-radius: 0;
+}
+.triangle {
+  background-color: white;
+  width: 0px;
+  border-left: 0rem dotted transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 5rem solid orange;
+  /* border: black 1rem solid; */
+  /* border-radius: 0; */
+}
+.square {
+  background-color: green;
+  width: 5rem;
+  height: 5rem;
+  border: black 1px solid;
+  border-radius: 0;
+}
+.circle {
+  background-color: yellow;
+  width: 4rem;
+  height: 4rem;
+  border: black 1px solid;
+  border-radius: 4rem;
+}
