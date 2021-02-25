@@ -1,0 +1,80 @@
+/* 
+things you might want to pay more attention to
+  z-index: 99; Not good idea
+  images are broken
+  no index.html on the root directory
+  more DRY css files
+  If you are using Mac you need .gitignore for .DB_Store
+  add GH pages link to about section for that repo
+  SORT files and directories
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS selectors */
+
+/* Element selector */
+
+/* #ID selector */
+
+/* .class selector */
+
+/* element,element Selector
+    element AND element 
+    */
+
+/* element element Selector
+    aka element inside element 
+    */
+
+/* element>element	 Selector  
+    element parent element 
+    */
+
+/* element+element  Selector
+    element immediately after element */
+
+/* element1~element2 Selector 
+    element preceded element */
+
+/* [attribute] Selector */
+
+/* [attribute=value] Selector  */
+
+/* [attribute~=value] Selector
+    containing the value */
+
+/* [attribute^=value] Selector
+    begins with the value */
+
+/* [attribute$=value] Selector
+    value ends with  */
+
+/* [attribute*=value] Selector
+    contains the substring */
+
+/* pseudo class  */
+/* :hover */
+
+/* :visited */
+
+/* :focus */
+
+/* :active */
+
+/* :checked */
+
+/* :target */
+
+/* :nth-child() */
+
+/* pseudo elements  */
+/* ::after  
+    :after css2 and ::after is css3*/
+
+/* ::before  
+      :before css2 and ::before is css3*/

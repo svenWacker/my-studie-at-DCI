@@ -31,7 +31,7 @@ div {
 .rectangle {
   background-color: lightblue;
   width: 6rem;
-  /* border: black 1px solid; */
+  border: black 1px solid;
   border-radius: 0;
 }
 .triangle {
@@ -41,15 +41,16 @@ div {
   border-left: 0rem dotted transparent;
   border-right: 5rem solid transparent;
   border-bottom: 5rem solid orange;
+  filter: grayscale(0.5);
 }
 .square {
   background-color: green;
-  /* border: black 1px solid; */
+  border: black 1px solid;
   border-radius: 0;
 }
 .circle {
   background-color: yellow;
-  /* border: black 1px solid; */
+  border: black 1px solid;
   border-radius: 50%;
 }
 .draw {
@@ -57,14 +58,18 @@ div {
   width: 3rem;
   height: 3rem;
   display: inline-block;
-  transform: rotatez(30deg);
+  transform: rotateZ(10deg);
+  z-index: 1;
 }
 .some {
-    background-color: grey;
-    width: 3rem;
-    height: 3rem;
-    display: inline-block;
-    position: relative;
-    top: 3vh;
-    box-shadow: 5px 5px 10px grey;
-    transform: rotate(20deg);
+  background-color: grey;
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  position: relative;
+  top: 3vh;
+  box-shadow: 5px 5px 10px grey;
+  transform: rotate(40deg);
+  z-index: -1;
+  opacity: 0.6;
+}
