@@ -1,3 +1,4 @@
+
 /* 
 things you might want to pay more attention to
   z-index: 99; Not good idea
@@ -10,71 +11,159 @@ things you might want to pay more attention to
 */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* CSS selectors */
-
-/* Element selector */
-
-/* #ID selector */
-
-/* .class selector */
-
-/* element,element Selector
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* CSS selectors */
+  
+  /* Element selector */
+  html {
+    background-color: orange;
+  }
+  
+  /* #ID selector */
+  #cool {
+    background-color: orangered;
+  }
+  /* .class selector */
+  .box {
+    background-color: orchid;
+  }
+  
+  /* element,element Selector
     element AND element 
     */
-
-/* element element Selector
+  table,
+  div {
+    background-color: paleturquoise;
+  }
+  
+  /* element element Selector
     aka element inside element 
     */
-
-/* element>element	 Selector  
+  div p {
+    font-size: smaller;
+  }
+  
+  /* element>element	 Selector  
     element parent element 
     */
-
-/* element+element  Selector
+  
+  div > p {
+    font-family: "Times New Roman", Times, serif;
+    color: purple;
+  }
+  /* element+element  Selector
     element immediately after element */
-
-/* element1~element2 Selector 
+  div + span {
+    background-color: rosybrown;
+  }
+  
+  /* element1~element2 Selector 
     element preceded element */
-
-/* [attribute] Selector */
-
-/* [attribute=value] Selector  */
-
-/* [attribute~=value] Selector
+  span ~ p {
+    background-color: royalblue;
+  }
+  
+  /* [attribute] Selector */
+  [id] {
+    background-color: seagreen;
+  }
+  
+  /* [attribute=value] Selector  */
+  [type="submit"] {
+    border: none;
+    background-color: pink;
+  }
+  
+  /* [attribute~=value] Selector
     containing the value */
-
-/* [attribute^=value] Selector
+  
+  [alt~="sun"] {
+    border: 3px solid black;
+  }
+  /* [attribute^=value] Selector
     begins with the value */
-
-/* [attribute$=value] Selector
+  [class^="te"] {
+    /* border: 3px solid hotpink; */
+    color: hotpink;
+  }
+  
+  /* [attribute$=value] Selector
     value ends with  */
-
-/* [attribute*=value] Selector
+  
+  [class$="box"] {
+    /* border: 3px solid hotpink; */
+    width: 14rem;
+  }
+  /* [attribute*=value] Selector
     contains the substring */
-
-/* pseudo class  */
-/* :hover */
-
-/* :visited */
-
-/* :focus */
-
-/* :active */
-
-/* :checked */
-
-/* :target */
-
-/* :nth-child() */
-
-/* pseudo elements  */
-/* ::after  
+  
+  [class*="long"] {
+    /* border: 3px solid hotpink; */
+    height: 3rem;
+  }
+  
+  /* pseudo class  */
+  /* :hover */
+  table:hover{
+      background-color: lightcoral;
+  }
+  /* a:hover{
+      color: yellow;
+  } */
+  /* :visited */
+  a:visited{
+      color: green;
+  }
+  /* a:visited, a:hover{
+    color: green;
+} */
+  /* :focus */
+  input[type="text"]:focus{
+      outline:none;
+      border: 2px solid red;
+      box-shadow: 3px 3px 3px #ccc;
+  }
+  /* a:hover + {
+    color: yellow;
+} */
+  /* :active */
+  a:active{
+      background-color: blue;
+  }
+  /* :checked */
+  [type="checkbox"]:checked{
+      width: 3rem;
+  }
+  /* :target */
+  
+  /* :nth-child() */
+  /* tr:nth-child(2n){
+      background-color: grey;
+  }
+  tr:nth-child(3n){
+    background-color: rgb(235, 121, 121);
+} */
+tr:nth-last-child(1){
+    background-color: forestgreen
+}
+tr:nth-child(2n) td:nth-child(2){
+    background-color: gold;
+}
+tr:nth-child(2n+1) :first-child{
+    background-color: chocolate;
+}
+tr:nth-child(1) :nth-child(n+3):nth-child(-n +5){
+    background-color: crimson;
+}
+  /* pseudo elements  */
+  /* ::after  
     :after css2 and ::after is css3*/
-
-/* ::before  
+  
+  /* ::before  
       :before css2 and ::before is css3*/
+  
+  /* here we will *
