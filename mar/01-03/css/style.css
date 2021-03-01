@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+    background-color: red;
+  } */
+/* pseudo elements VS  pseudo classes */
+
+/* pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s). */
+/* more pseudo classes
+  :valid
+  :hover */
+
+/* pseudo-element is a keyword added to a selector that lets you style a specific part of the selected element(s) */
+
+/* ::before  Vs :before */
+/*   
+    :before css2 and ::before is css3
+  */
+
+div[class="main-text"]::after {
+  content: "😎";
+}
+
+div[class="main-text"]::before {
+  content: "💪🏻";
+}
+/* ::placeholder  */
+[type="text"]::placeholder {
+  color: orange;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* ::first-letter (:first-letter) */
+.text::first-letter {
+  color: greenyellow;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* display:none vs opacity: 0 */
+.tree {
+  width: 15vw;
+  height: 15vw;
+  box-shadow: 3px 3px 3px rgba(150, 40, 4, 0.5);
+  opacity: 0;
+  filter: grayscale(50);
+  /* display: none; */
+}
+.tree:hover {
+  transition: 2s ease-in-out;
+  opacity: 1;
+  filter: grayscale(0);
+  width: 20vw;
+  height: 20vh;
+}
+/* vh & vw */
+
+.menu {
+  width: 100vw;
+  height: 15vh;
+  background-color: orange;
+}
+ul li {
+  display: inline-block;
+  /* This is Okay for now, soon  🙄 */
+  margin-right: 4vw;
+}
+/* visual content like img */
+/*  % , border-radius */
+.last-img {
+  width: 50vw;
+  height: 50vh;
+  overflow: hidden;
+}
+.last-img img {
+  width: 100%;
+  height: 50%;
+}
