@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Akaya Telivigala";
+  src: url("../fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Akaya Telivigala", Arial, sans-serif;
+  background-image: url(../img/tree.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+h1 {
+  color: rgb(49, 16, 16);
+  font-size: 5.4rem;
+  margin: 2rem;
+  padding: 2rem;
+}
+::slotted([slot="slot1"]) {
+  /* slot1 every slotted element - YES */
+  color: red;
+}
+
+slot[name="slot1"] {
+  /* slot1 itself - YES */
+  text-decoration: underline;
+}
+
+slot[name="slot1"] + .siblingA {
+  /* slot1 siblingA (direct sibling) - YES */
+  color: green;
+}
+
+slot[name="slot1"] ~ .siblingB {
+  /* slot1 siblingB (any sibling) - YES */
+  color: orange;
+}
+
+slot[name="slot2"]::slotted(.selectMeA) {
+  /* slot2 TOP-LEVEL CHILD (slotted) - YES */
+  color: purple;
+}
+
+slot[name="slot2"]::slotted(.selectMeB) {
+  /* slot2 NOT TOP-LEVEL CHILD - NO */
+  font-weight: bold;
+}
+
+slot[name="slot2"]::slotted(.selectMeC[name="myName"]) {
+  /* slot2 TOP-LEVEL CHILD (slotted) - YES */
+  color: khaki;
+}
+
+slot[name="slot2"] + .siblingC {
+  /* slot2 sibling - YES */
+  color: blue;
+}
