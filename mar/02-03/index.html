@@ -9,30 +9,33 @@
   </head>
   <body>
     <center>
-      <div class="main-text">
-        <h1>Pseudo element :: slotted()</h1>
-      </div>
-      <div class="slot1">
-        <h2>slot1</h2>
-        <slot name="slot1"></slot>
-        <div class="siblingA">Sibling A of Slot 1</div>
-        <div class="siblingB">Sibling B of Slot 1</div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
-          alias quia expedita nulla eaque enim esse dolores, delectus earum
-          rerum.
-          <span>Beatae delectus nemo expedita quas eligendi architecto?</span>
-          Quasi suscipit magni dolor? Molestias velit aspernatur, ipsum iusto
-          error recusandae blanditiis laboriosam.
-        </p>
-      </div>
-      <hr />
-      <div class="slot2">
-        <h2>slot2</h2>
-        <slot name="slot2"></slot>
-        <div class="siblingC">Sibling C of Slot 2</div>
-      </div>
-      <hr />
+      <section>
+        <div class="main-text">
+          <h1>Pseudo element :: slotted()</h1>
+        </div>
+        <div>
+          <h2>slot1</h2>
+          <slot name="slot1"></slot>
+          <div class="siblingA">Sibling A of Slot 1</div>
+          <div class="siblingB">Sibling B of Slot 1</div>
+          <div class="siblingC">Sibling C of Slot 1</div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+            alias quia expedita nulla eaque enim esse dolores, delectus earum
+            rerum.
+            <span>Beatae delectus nemo expedita quas eligendi architecto?</span>
+            Quasi suscipit magni dolor? Molestias velit aspernatur, ipsum iusto
+            error recusandae blanditiis laboriosam.
+          </p>
+        </div>
+        <hr />
+        <div>
+          <h2>slot2</h2>
+          <slot name="slot2"></slot>
+          <div class="siblingC">Sibling C of Slot 2</div>
+        </div>
+        <hr />
+      </section>
     </center>
   </body>
 </html>
