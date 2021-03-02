@@ -4,28 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pseudo elemnt :: slotted()</title>
+    <title>Pseudo element :: slotted()</title>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <div>
-      <slot name="slot1"></slot>
-      <div class="siblingA">Sibling A of Slot 1</div>
-      <div class="siblingB">Sibling B of Slot 1</div>
-    </div>
-    <hr/>
-    <div>
-      <slot name="slot2"></slot>
-      <div class="siblingC">Sibling C of Slot 2</div>
-    </div>
-    <div class='templateMe'>
-      <span slot="slot1">Im in Solt 1</span>
-      <span slot="slot2" class="selectMeA">
-        Im in Solt 2, im selectable.
-        <div class='selectMeB'>
-          NOT selectable (because no top level node of slotted)!
-        </div>
-      </span>
-      <span slot="slot2" class="selectMeC" name="myName">Im in Solt 2 too and selectable!</span>
+    <center>
+      <div class="main-text">
+        <h1>Pseudo element :: slotted()</h1>
+      </div>
+      <div class="slot1">
+        <h2>slot1</h2>
+        <slot name="slot1"></slot>
+        <div class="siblingA">Sibling A of Slot 1</div>
+        <div class="siblingB">Sibling B of Slot 1</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione
+          alias quia expedita nulla eaque enim esse dolores, delectus earum
+          rerum.
+          <span>Beatae delectus nemo expedita quas eligendi architecto?</span>
+          Quasi suscipit magni dolor? Molestias velit aspernatur, ipsum iusto
+          error recusandae blanditiis laboriosam.
+        </p>
+      </div>
+      <hr />
+      <div class="slot2">
+        <h2>slot2</h2>
+        <slot name="slot2"></slot>
+        <div class="siblingC">Sibling C of Slot 2</div>
+      </div>
+      <hr />
+    </center>
   </body>
 </html>

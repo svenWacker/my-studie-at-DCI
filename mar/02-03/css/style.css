@@ -17,46 +17,33 @@ html {
 }
 h1 {
   color: rgb(49, 16, 16);
-  font-size: 5.4rem;
-  margin: 2rem;
-  padding: 2rem;
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem;
 }
-::slotted([slot="slot1"]) {
-  /* slot1 every slotted element - YES */
+h2 {
+  color: rgb(184, 55, 55);
+  font-size: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+::slotted(p) {
+  font-weight: bold;
   color: red;
 }
 
 slot[name="slot1"] {
-  /* slot1 itself - YES */
   text-decoration: underline;
 }
 
 slot[name="slot1"] + .siblingA {
-  /* slot1 siblingA (direct sibling) - YES */
-  color: green;
+  color: whitesmoke;
 }
 
 slot[name="slot1"] ~ .siblingB {
-  /* slot1 siblingB (any sibling) - YES */
   color: orange;
 }
 
-slot[name="slot2"]::slotted(.selectMeA) {
-  /* slot2 TOP-LEVEL CHILD (slotted) - YES */
-  color: purple;
-}
-
-slot[name="slot2"]::slotted(.selectMeB) {
-  /* slot2 NOT TOP-LEVEL CHILD - NO */
-  font-weight: bold;
-}
-
-slot[name="slot2"]::slotted(.selectMeC[name="myName"]) {
-  /* slot2 TOP-LEVEL CHILD (slotted) - YES */
-  color: khaki;
-}
-
 slot[name="slot2"] + .siblingC {
-  /* slot2 sibling - YES */
   color: blue;
 }
