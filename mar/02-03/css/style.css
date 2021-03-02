@@ -27,13 +27,11 @@ h2 {
   margin: 0.5rem;
   padding: 0.5rem;
 }
-::slotted([slot="slot1"]) {
-  /* slot1 every slotted element - YES */
+::slotted([slot="slot2"]) {
   color: rgb(255, 230, 0);
 }
 
 slot[name="slot1"] {
-  /* slot1 itself - YES */
   text-decoration: underline;
 }
 
