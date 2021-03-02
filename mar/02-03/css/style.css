@@ -1,19 +1,11 @@
-@font-face {
-  font-family: "Akaya Telivigala";
-  src: url("../fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf");
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 html {
-  font-family: "Akaya Telivigala", Arial, sans-serif;
-  background-image: url(../img/tree.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
 }
 h1 {
   color: rgb(49, 16, 16);
@@ -27,7 +19,7 @@ h2 {
   margin: 0.5rem;
   padding: 0.5rem;
 }
-::slotted([slot="slot2"]) {
+::slotted([slot="slot1"]) {
   color: rgb(255, 230, 0);
 }
 
@@ -36,13 +28,13 @@ slot[name="slot1"] {
 }
 
 slot[name="slot1"] + .siblingA {
-  color: whitesmoke;
+  color: rgb(150, 33, 33);
 }
 
 slot[name="slot1"] ~ .siblingB {
   color: orange;
 }
 
-slot[name="slot2"] + .siblingC {
+slot[name="slot1"] + .siblingC {
   color: blue;
 }
