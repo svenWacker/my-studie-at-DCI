@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancy Forms</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Personal info</legend>
+        <input type="text" name="name" placeholder="Enter your name" id="1" />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Your last name"
+          id="2"
+        />
+        <input type="datetime" name="bDay" id="3" />
+      </fieldset>
+      <fieldset>
+        <legend>Fav things</legend>
+        <input type="color" name="color" id="4" />
+        <input type="time" name="time" id="5" />
+      </fieldset>
+      <section class="toggle">
+        <label class="toggle-table">Want more Info?</label>
+        <input type="checkbox" name="moreInfo" />
+        <span class="slider"></span>
+      </section>
+      <input type="submit" value="Send" />
+    </form>
+  </body>
+</html>
