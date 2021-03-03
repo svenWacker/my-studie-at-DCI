@@ -75,4 +75,10 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(2.5rem);
 }
+i {
+  font-size: 3rem;
+  color: aqua;
+  box-shadow: 3px 3px 3px red;
+  border-radius: 50%;
+}
 /* fancy checkbox */
