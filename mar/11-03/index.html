@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More CSS rules</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <section class="menu">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">About us</a></li>
+        </ul>
+      </nav>
+    </section>
+    <section class="main">
+      <section class="main-intro">
+        <div class="orange"></div>
+        <h1>Hi, do you like water?</h1>
+        <h4>We have the right one for you</h4>
+      </section>
+      <section class="more-info">
+        <div class="gray"></div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          architecto enim atque autem, modi magni repellendus repellat possimus,
+          laudantium, amet iste eius nam inventore accusantium iure in
+          temporibus! Unde, libero assumenda? Illum placeat, ipsa harum impedit
+          nulla tempora delectus accusantium.
+        </p>
+      </section>
+    </section>
+    <footer>
+      <h5>Made with ❤️ By Hadi and added with ❤️ By Sven</h5>
+      <h6>All copyrights reserved ® <span class="year"></span></h6>
+    </footer>
+    <script>
+      let year = new Date().getFullYear();
+      document.querySelector(".year").innerHTML = year;
+    </script>
+  </body>
+</html>

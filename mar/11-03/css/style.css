@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  --my-orange: rgba(235, 133, 8, 0.8);
+}
+
+/* font */
+p {
+  font: italic 1.5rem fantasy;
+  /* word-break: break-all; */
+  text-indent: 3rem;
+  word-spacing: 0.3rem;
+}
+
+/* direction */
+/* h1 {
+    writing-mode: vertical-lr;
+  } */
+
+.menu {
+  width: 100vw;
+  background-color: var(--my-orange);
+}
+.menu nav ul {
+  height: 5vh;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  /* text-decoration-color: green; */
+  color: white;
+  transition: 2s;
+}
+li:hover {
+  transform: scale(1.5);
+  border-bottom: 2px gray solid;
+}
+.main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-intro {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.gray {
+  width: 70rem;
+  height: 50rem;
+  position: absolute;
+  right: -30rem;
+  bottom: -10rem;
+  background-color: lightgray;
+  z-index: -1;
+  transform: rotate(-45deg);
+  border-radius: 10% 0 10% 10%;
+}
+/* positions */
+/* static aka Default*/
+.orange {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: -6rem;
+  left: -3rem;
+  background-color: var(--my-orange);
+  z-index: -1;
+  transform: rotate(-45deg);
+  border-radius: 10%;
+}
+/* info box */
+.more-info {
+  width: 50vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+p {
+  position: absolute;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
