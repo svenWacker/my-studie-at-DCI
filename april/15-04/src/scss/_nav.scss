@@ -1,0 +1,17 @@
+nav {
+  ul {
+    list-style: none;
+    width: $your-size;
+  }
+  li {
+    display: inline-block;
+    margin: $li-margin;
+  }
+  a {
+    text-decoration: none;
+    color: $a-color;
+    &:hover {
+      background-color: palegoldenrod;
+    }
+  }
+}
