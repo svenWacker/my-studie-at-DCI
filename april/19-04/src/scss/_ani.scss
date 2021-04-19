@@ -1,0 +1,19 @@
+.box {
+  @include fade-in(3s);
+  @include size-for-div;
+  background-color: purple;
+}
+
+@keyframes fade-in {
+  0% {
+    @include hide;
+    width: 5rem;
+    transform: scale(0) rotate(0deg);
+  }
+
+  100% {
+    @include reveal;
+    width: 3rem;
+    transform: scale(1) rotate(90deg);
+  }
+}

@@ -1,0 +1,36 @@
+// Reset list style
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Center content
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// Size for box
+@mixin size-for-div {
+  width: 4rem;
+  height: 4rem;
+}
+
+// Hide element
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// Fade
+@mixin reveal {
+  opacity: 1;
+  visibility: visible;
+}
+@mixin fade-in($time) {
+  animation-name: fade-in;
+  animation-duration: #{$time};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

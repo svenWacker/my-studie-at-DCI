@@ -1,0 +1,5 @@
+.header {
+  @include center;
+  @include size-for-div;
+  background-color: orange;
+}
