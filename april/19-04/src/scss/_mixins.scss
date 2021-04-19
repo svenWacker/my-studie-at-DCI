@@ -34,3 +34,72 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+@mixin normalize {
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+// creating a map
+
+// Maps in Sass hold pairs of keys and values, and make it easy to look up a value by its corresponding key. They’re written
+
+// if else in sass
+// Drawing triangle
+@mixin triangle($direction, $color: #000) {
+  width: 0;
+  height: 0;
+  @if $direction == up {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $color;
+  } @else if $direction == right {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $color;
+  } @else if $direction == left {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $color;
+  } @else if $direction == down {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $color;
+  } @else {
+    @error "Unknown direction #{$direction} ";
+  }
+}
+
+// map
+
+$font-sizing: (
+  xs: 12px,
+  s: 14px,
+  m: 16px,
+  l: 20px,
+  xl: 40px,
+  xxl: 60px,
+);
+$orange-colors: (
+  light: rgb(214, 107, 25),
+  dark: rgb(214, 107, 14),
+  super: rgb(214, 107, 20),
+);
+
+@mixin font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    font-size: map-get($font-sizing, $size);
+  } @else {
+    @error "#{$size} this is not defined, Use #{font-sizing}";
+  }
+}
+// functions in sass
+@function font-size($size) {
+  @if map-has-key($font-sizing, $size) {
+    @return map-get($font-sizing, $size);
+  } @else {
+    @error "#{$size} this is not defined, Use #{font-sizing}";
+  }
+}

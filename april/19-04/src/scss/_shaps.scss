@@ -1,0 +1,29 @@
+.triangle {
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    margin: 1rem;
+  }
+  &::before {
+    @include triangle(right, blue);
+  }
+  &::after {
+    @include triangle(left, orange);
+  }
+}
+.text-xs {
+  @include font-size(xs);
+}
+.text-s {
+  @include font-size(s);
+}
+.text-m {
+  @include font-size(m);
+}
+.text-xl {
+  @include font-size(xl);
+}
+.text-xxl {
+  @include font-size(xxl);
+}
