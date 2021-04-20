@@ -1,0 +1,66 @@
+// @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+$items-count: 30; // corresponds to the number of divs in your HTML
+
+// Define animation
+@keyframes move {
+  0% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(1.4);
+  }
+}
+
+// Mixin to use animation
+@mixin add-move-animation($duration) {
+  animation-name: move;
+  animation-duration: $duration;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.items-container {
+  display: grid;
+  grid-template-columns: repeat($items-count, 1fr);
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+// For loop to randomize values for each div bar
+@for $i from 1 through $items-count {
+  .item:nth-child(#{$i}) {
+    background: linear-gradient(
+      to bottom right,
+      lighten(orange, random(40)),
+      rgba(darken(orange, random(10)), 1)
+    );
+    // random() will return a number between 1-100 with no argument being passed to it, or when you pass in a single integer parameter to define the upper limit. random(20) will return a number between 1-20.
+    height: random(60) + 10 + vh;
+    border-radius: 0 0 ((random(50) + 10 + px)) ((random(50) + 10 + px));
+    transform-origin: 0 0;
+
+    @if (($i % 2) != 0) {
+      border-radius: ((random(50) + 10 + px)) ((random(20) + 10 + px)) 0 0;
+      background: linear-gradient(
+        to top right,
+        lighten(gray, random(40)),
+        rgba(darken(gray, random(10)), 1)
+      );
+    }
+    // The lighten() function increases lightness by a fixed amount.
+    // The darken() function decreases lightness by a fixed amount.
+    @include add-move-animation(random(5) + 1 + s);
+  }
+}
+
+.item:nth-child(odd) {
+  align-self: end;
+  transform-origin: 0 100%;
+}
