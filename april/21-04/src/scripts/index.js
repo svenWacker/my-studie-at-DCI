@@ -49,25 +49,29 @@ function calculation() {
   //   console.log(userNum2);
   //   console.log(userNum1 * userNum2);
   let userCal = document.querySelector("#cal").value;
-  var calResult = 0;
-
+  let resultText = "";
   //   for (let i = 1; i <= 10; i++) {
   //     resultText += `${i} * ${userNum} ☘️ ${i * userNum} <br>`;
   //   }
-
   if (userCal == 1) {
-    calResult = Number(userNum1) + Number(userNum2);
+    resultText += `${userNum1} + ${userNum2} ☘️ ${
+      Number(userNum1) + Number(userNum2)
+    } <br>`;
   }
   if (userCal == 2) {
-    calResult = Number(userNum1) - Number(userNum2);
+    resultText += `${userNum1} - ${userNum2} ☘️ ${
+      Number(userNum1) - Number(userNum2)
+    } <br>`;
   }
   if (userCal == 3) {
-    calResult = Number(userNum1) * Number(userNum2);
+    resultText += `${userNum1} * ${userNum2} ☘️ ${
+      Number(userNum1) * Number(userNum2)
+    } <br>`;
   }
   if (userCal == 4) {
-    calResult = Number(userNum1) / Number(userNum2);
+    resultText += `${userNum1} / ${userNum2} ☘️ ${
+      Number(userNum1) / Number(userNum2)
+    } <br>`;
   }
-  let resultText = "";
-  resultText += `${userNum1} * ${userNum2} ☘️ ${calResult} <br>`;
   document.querySelector(".result").innerHTML = resultText;
 }
