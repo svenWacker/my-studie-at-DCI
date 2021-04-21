@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser</title>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <!-- Your elements goes here -->
+
+    <script>
+      console.log("Cool");
+    </script>
+    <div>
+      <p id="main">This is cool 🤓</p>
+      <input type="button" value="Read more" onclick="change()" />
+    </div>
+    <hr />
+    <select name="number1" id="num1" class="select-num1">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <select name="calculation" id="cal" class="select-cal">
+      <option value="1">+</option>
+      <option value="2">-</option>
+      <option value="3">*</option>
+      <option value="4">/</option>
+    </select>
+    <select name="number2" id="num2" class="select-num2">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+    <button onclick="calculation()">Calculate</button>
+    <div class="result"></div>
+    <!-- Custom scripts, edit above this line -->
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
