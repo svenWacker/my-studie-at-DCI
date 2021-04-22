@@ -42,3 +42,23 @@ moreClass.classList.add("cool", "flex-size");
 console.log(moreClass.classList);
 moreClass.classList.remove("flex-size");
 console.log(moreClass.classList);
+
+let classArr = ["classOne", "classTwo"];
+moreClass.classList.add(...classArr);
+console.log(moreClass.classList);
+
+// keep on mind font-size in js fontSize
+moreClass.style.fontSize = "2.3rem";
+moreClass.style.color = "red";
+moreClass.style.cssText = "font-size: 2.0rem; color: blue;";
+
+const theme = () => {
+  const mood = document.querySelector("#light-dark").checked;
+  body = document.querySelector("body").style;
+  console.log(mood);
+  if (mood) {
+    body.backgroundColor = "black";
+  } else {
+    body.backgroundColor = "white";
+  }
+};
