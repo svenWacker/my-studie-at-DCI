@@ -41,4 +41,20 @@ let menuList = document.getElementById("menu");
 console.log(menuList.firstElementChild);
 console.log(menuList.lastElementChild);
 
-//
+// Different types of notes
+document.nodeType === Node.DOCUMENT_NODE; // true
+document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
+
+document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
+
+var p = document.createElement("p");
+p.textContent = "Once upon a time…";
+
+p.nodeType === Node.ELEMENT_NODE; // true
+p.firstChild.nodeType === Node.TEXT_NODE; // true
+
+// Comments
+var node = document.documentElement.firstChild;
+if (node.nodeType !== Node.COMMENT_NODE) {
+  console.warn("You should comment your code!");
+} else console.log(node);
