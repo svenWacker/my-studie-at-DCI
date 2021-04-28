@@ -34,13 +34,26 @@ names.forEach((name) => {
     console.log(`${name.textContent} is a teacher for FBW 48-1`); // output with grabbing the text content
 });
 // querySelector
+
 const allChildren = document.querySelector("body").children; // "ul" gives you all children
 console.log(allChildren);
 
 let menuList = document.getElementById("menu");
 console.log(menuList.firstElementChild);
 console.log(menuList.lastElementChild);
-
+//
+//
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext
+//
+let text2 = document.getElementById("divA").textContent;
+// The text variable is now: 'This is some text!'
+document.getElementById("divA").textContent = "This text is different!";
+// The HTML for divA is now:
+// <div id="divA">This text is different!</div>
+//
+//
+//
+// https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
 // Different types of notes
 document.nodeType === Node.DOCUMENT_NODE; // true
 document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
