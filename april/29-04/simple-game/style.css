@@ -20,9 +20,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-flow: wrap column;
-  top: 50%;
-  right: 5%;
-  width: 60px;
-  height: 60px;
+  top: 53%;
+  right: 1%;
+  width: 55px;
+  height: 55px;
   background-color: white;
 }
