@@ -52,22 +52,74 @@ document.getElementById("divA").textContent = "This text is different!";
 // <div id="divA">This text is different!</div>
 //
 //
-//
 // https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
 // Different types of notes
-document.nodeType === Node.DOCUMENT_NODE; // true
-document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
-document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
+// done by me from mozilla:
+//--------------------------//
+// document.nodeType === Node.DOCUMENT_NODE; // true
+// document.doctype.nodeType === Node.DOCUMENT_TYPE_NODE; // true
 
-var p = document.createElement("p");
-p.textContent = "Once upon a time…";
+// document.createDocumentFragment().nodeType === Node.DOCUMENT_FRAGMENT_NODE; // true
 
-p.nodeType === Node.ELEMENT_NODE; // true
-p.firstChild.nodeType === Node.TEXT_NODE; // true
+// var p = document.createElement("p");
+// p.textContent = "Once upon a time…";
 
-// Comments
-var node = document.documentElement.firstChild;
-if (node.nodeType !== Node.COMMENT_NODE) {
-  console.warn("You should comment your code!");
-} else console.log(node);
+// p.nodeType === Node.ELEMENT_NODE; // true
+// p.firstChild.nodeType === Node.TEXT_NODE; // true
+
+// // Comments
+// var node = document.documentElement.firstChild;
+// if (node.nodeType !== Node.COMMENT_NODE) {
+//   console.warn("You should comment your code!");
+// } else console.log(node);
+
+// all comments in your html page should be printed in console
+// but first let's understand apply method
+const lettersArr = ["a", "b"];
+const numbers = [0, 1, 2];
+lettersArr.push.apply(lettersArr, numbers);
+console.info(lettersArr); // ["a", "b", 0, 1, 2]
+// get me now all the comments please 😅
+let allComments = (element) => {
+  let arr = [];
+  element.childNodes.forEach((node) => {
+    node.nodeType == 8
+      ? arr.push(node)
+      : arr.push.apply(arr, allComments(node));
+  });
+  return arr;
+};
+
+// childElementCount will tell you how many child elements this element has
+// firstChild , lastChild
+// firstElementChild , lastElementChild
+// nextSibling , previousSibling
+// nextElementSibling , previousElementSibling
+// innerHTML ,  innerText , textContent
+//console.log(allComments(document));
+// nice work from two people in our class 🦾
+const allChildren2 = Array.from(document.querySelector("body").childNodes);
+console.log(allChildren2);
+allChildren2.forEach((child) => {
+  if (child.nodeType == 8) console.log(child);
+});
+
+// copy from html to clipboard
+//
+const copy = () => {
+  let text = document.querySelector(".userInput");
+  text.select();
+  document.execCommand("copy");
+};
+document.querySelector(".copyButton").addEventListener("click", copy);
+//
+//
+// other way
+// const allEll = document.querySelectorAll("*");
+// console.log(allEll);
+// allEll.forEach((elem) =>
+//   elem.childNodes.forEach((node) => {
+//     if (node.nodeName === "#comment") console.log(node);
+//   })
+// );
