@@ -35,7 +35,6 @@ function showMsg(str) {
 }
 function hide() {
   const close = document.querySelector(".close");
-
   close.parentElement.style.display = "none";
 }
 
