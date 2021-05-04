@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,4 +22,20 @@ footer {
   align-items: center;
   flex-flow: column;
   font-size: smaller;
+} */
+.done {
+  position: relative;
+  /* border: 2px dashed red; */
+  /* diplay:none; */
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: lime;
+  width: 30%;
+}
+.close {
+  position: absolute;
+  right: 3px;
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
 }
