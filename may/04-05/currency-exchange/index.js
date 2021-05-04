@@ -6,7 +6,7 @@ const userInput = document.querySelector("#userInput");
 const currency = document.querySelector("#currency");
 
 function registerUserValue(e) {
-  console.log(e.target.value);
+  console.dir(e.target.value);
   userNumber = e.target.value;
 }
 
