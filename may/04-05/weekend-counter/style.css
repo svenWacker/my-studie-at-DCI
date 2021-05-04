@@ -7,6 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 90vh;
   width: 100vw;
   background-color: black;
@@ -14,9 +15,24 @@ body {
 }
 main {
   font-family: "Itim", cursive;
+  width: 50vw;
+  height: 50vh;
+  line-height: 3rem;
+}
+input {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: larger;
+}
+button {
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: smaller;
 }
 footer {
-  align-self: flex-end;
+  width: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;

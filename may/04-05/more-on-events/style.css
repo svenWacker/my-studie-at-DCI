@@ -1,0 +1,17 @@
+.done {
+  position: relative;
+  /* border: 2px dashed red; */
+  /* diplay:none; */
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: lime;
+  width: 30%;
+}
+.close {
+  position: absolute;
+  right: 3px;
+  transition: 0.5s;
+  cursor: pointer;
+  color: white;
+}

@@ -4,6 +4,10 @@ const header = document.querySelector("h1");
 const msg = document.querySelector(".msg");
 const done = document.querySelector(".done");
 const changeColor = document.querySelector(".changeColor");
+
+const btnStop = document.querySelector(".btnStop");
+const btnStart = document.querySelector(".btnStart");
+const btnClear = document.querySelector(".btnClear");
 // showMsg
 function newUser() {
   result.innerHTML += "Hey, welcome again 😎 <br>";
@@ -35,6 +39,7 @@ function showMsg(str) {
 }
 function hide() {
   const close = document.querySelector(".close");
+
   close.parentElement.style.display = "none";
 }
 
@@ -49,7 +54,18 @@ changeColor.addEventListener("click", (e) => {
   e.preventDefault();
   // do something cool :)
   form.style.backgroundColor = "orange";
+  btnStart.style.backgroundColor = "green";
+  btnStop.style.backgroundColor = "red";
+});
+changeColor.addEventListener("click", (e) => {
+  e.preventDefault();
+  // do something cool :)
+  form.style.backgroundColor = "orange";
+  btnStart.style.backgroundColor = "green";
+  btnStop.style.backgroundColor = "red";
 });
 form.addEventListener("reset", () => {
   showMsg("Your input has been cleared put.");
+  btnStart.style.backgroundColor = "none";
+  btnStop.style.backgroundColor = "none";
 });
