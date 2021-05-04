@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  height: 90vh;
+  width: 100vw;
+  background-color: yellow;
+}
+main {
+  font-family: "Itim", cursive;
+}
+
+footer {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  font-size: smaller;
+}
