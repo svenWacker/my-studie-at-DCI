@@ -71,7 +71,6 @@ function fetchApiTodos() {
       data.forEach((todo) => {
         let { userId, id, title, completed } = todo;
         console.log(completed);
-
         userCard += `
         <div id=${id}>
         <h3>${title}   <input type="checkbox"></h3>
