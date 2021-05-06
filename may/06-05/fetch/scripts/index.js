@@ -35,7 +35,7 @@ function fetchJsonFile() {
 
 // we will use
 // https://jsonplaceholder.typicode.com/photos
-function fetchApi() {
+function fetchApiPhoto() {
   fetch("https://jsonplaceholder.typicode.com/photos")
     .then((response) => response.json())
     .then((data) => {
@@ -50,6 +50,48 @@ function fetchApi() {
           <img src=${url} alt=${title}>
           </div>
           `;
+      });
+      document.querySelector(".result").innerHTML = userCard;
+    })
+    .catch((err) => console.log(err));
+}
+
+function fetchApiTodos() {
+  fetch("#https://jsonplaceholder.typicode.com/photos")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      let userCard = "<h2>Images API response </h2>";
+      data.forEach((img) => {
+        let { albumId, id, title, url, thumbnailUrl } = img;
+        userCard += `
+            <div id=${id}>
+            <img src=${thumbnailUrl} >
+            <h3>${title}</h3>
+            <img src=${url} alt=${title}>
+            </div>
+            `;
+      });
+      document.querySelector(".result").innerHTML = userCard;
+    })
+    .catch((err) => console.log(err));
+}
+
+function fetchApiComments() {
+  fetch("#https://jsonplaceholder.typicode.com/photos")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      let userCard = "<h2>Images API response </h2>";
+      data.forEach((img) => {
+        let { albumId, id, title, url, thumbnailUrl } = img;
+        userCard += `
+              <div id=${id}>
+              <img src=${thumbnailUrl} >
+              <h3>${title}</h3>
+              <img src=${url} alt=${title}>
+              </div>
+              `;
       });
       document.querySelector(".result").innerHTML = userCard;
     })
