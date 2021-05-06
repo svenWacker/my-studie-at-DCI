@@ -55,20 +55,24 @@ function fetchApiPhoto() {
     })
     .catch((err) => console.log(err));
 }
-
+// https://jsonplaceholder.typicode.com/todos
+// {
+//     "userId": 1,
+//     "id": 1,
+//     "title": "delectus aut autem",
+//     "completed": false
+//   },
 function fetchApiTodos() {
-  fetch("#https://jsonplaceholder.typicode.com/photos")
+  fetch("https://jsonplaceholder.typicode.com/todos")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      let userCard = "<h2>Images API response </h2>";
-      data.forEach((img) => {
-        let { albumId, id, title, url, thumbnailUrl } = img;
+      let userCard = "<h2>Todos API response </h2>";
+      data.forEach((todo) => {
+        let { UserId, id, title, completed } = todo;
         userCard += `
             <div id=${id}>
-            <img src=${thumbnailUrl} >
             <h3>${title}</h3>
-            <img src=${url} alt=${title}>
             </div>
             `;
       });
@@ -76,20 +80,27 @@ function fetchApiTodos() {
     })
     .catch((err) => console.log(err));
 }
-
+// https://jsonplaceholder.typicode.com/comments
+// {
+//     "postId": 1,
+//     "id": 1,
+//     "name": "id labore ex et quam laborum",
+//     "email": "Eliseo@gardner.biz",
+//     "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+//   },
 function fetchApiComments() {
-  fetch("#https://jsonplaceholder.typicode.com/photos")
+  fetch("https://jsonplaceholder.typicode.com/comments")
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      let userCard = "<h2>Images API response </h2>";
-      data.forEach((img) => {
-        let { albumId, id, title, url, thumbnailUrl } = img;
+      let userCard = "<h2>Comments API response </h2>";
+      data.forEach((comment) => {
+        let { postId, id, name, email, body } = comment;
         userCard += `
               <div id=${id}>
-              <img src=${thumbnailUrl} >
-              <h3>${title}</h3>
-              <img src=${url} alt=${title}>
+              <h3>${name}</h3>
+              <span>${email}</span>
+             <p>${body}</p> 
               </div>
               `;
       });
