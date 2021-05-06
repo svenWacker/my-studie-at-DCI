@@ -69,17 +69,20 @@ function fetchApiTodos() {
       console.log(data);
       let userCard = "<h2>Todos API response </h2>";
       data.forEach((todo) => {
-        let { UserId, id, title, completed } = todo;
+        let { userId, id, title, completed } = todo;
+        console.log(completed);
+
         userCard += `
-            <div id=${id}>
-            <h3>${title}</h3>
-            </div>
-            `;
+        <div id=${id}>
+        <h3>${title}   <input type="checkbox"></h3>
+        </div>
+        `;
       });
       document.querySelector(".result").innerHTML = userCard;
     })
     .catch((err) => console.log(err));
 }
+
 // https://jsonplaceholder.typicode.com/comments
 // {
 //     "postId": 1,
