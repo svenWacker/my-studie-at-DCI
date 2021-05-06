@@ -71,9 +71,20 @@ function fetchApiTodos() {
       data.forEach((todo) => {
         let { userId, id, title, completed } = todo;
         console.log(completed);
+        // //Check
+        // document.getElementById('checkbox').setAttribute('checked', 'checked');
+
+        // //UnCheck
+        // document.getElementById('chk').removeAttribute('checked');
+
+        //   checkbox = document.getElementById(checkbox);
+        // if ((checkbox.value = true)) {
+        //   checkbox.checked;
+        // }
+
         userCard += `
         <div id=${id}>
-        <h3>${title}   <input type="checkbox"></h3>
+        <h3>${title}   <input type="checkbox" value="${completed}"></h3>
         </div>
         `;
       });
