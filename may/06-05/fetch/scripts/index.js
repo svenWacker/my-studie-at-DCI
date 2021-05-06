@@ -29,9 +29,29 @@ function fetchJsonFile() {
     .catch((err) => console.log(err));
 }
 // API
-//  application programming interface
+//  Application Programming Interface
 
 // https://jsonplaceholder.typicode.com/
 
 // we will use
 // https://jsonplaceholder.typicode.com/photos
+function fetchApi() {
+  fetch("https://jsonplaceholder.typicode.com/photos")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      let userCard = "<h2>Images API response </h2>";
+      data.forEach((img) => {
+        let { albumId, id, title, url, thumbnailUrl } = img;
+        userCard += `
+          <div id=${id}>
+          <img src=${thumbnailUrl} >
+          <h3>${title}</h3>
+          <img src=${url} alt=${title}>
+          </div>
+          `;
+      });
+      document.querySelector(".result").innerHTML = userCard;
+    })
+    .catch((err) => console.log(err));
+}
