@@ -48,6 +48,9 @@ function secondStep(response) {
     resolve(`We have been waiting for you ${response}`);
   });
 }
+
+// First way, already shown the week before:
+
 // stepOne("Zain")
 //   .then((response) => {
 //     console.log("response just arrive");
@@ -58,6 +61,7 @@ function secondStep(response) {
 //   })
 //   .catch((err) => console.log(err));
 
+// Next way:
 // Async Await
 async function startSomething() {
   try {
