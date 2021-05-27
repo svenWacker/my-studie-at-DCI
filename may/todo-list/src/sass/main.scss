@@ -1,34 +1,75 @@
+//Colors
+$fontW: #fff;
+$fontB: #000;
+
+$clr-primary: #0d253f;
+$clr-secondary: #01b4e4;
+$clr-tertiary: #90cea1;
+$poster-background: #0b3957;
+
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #d1d1d1;
+  background-color: $clr-primary;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 #root {
+  flex-wrap: wrap;
+  margin: 5rem;
+  padding: 2rem;
   width: 75%;
   height: auto;
+  background-color: $poster-background;
+  border-radius: 10px;
+  border: 2px solid $clr-tertiary;
 }
+.header {
+  color: $clr-secondary;
+}
+
 // Text input
 input[type="text"] {
   border: 0 none;
   width: 25rem;
   margin: 3rem 0 3rem 0;
 }
-// Every other list item
-li:nth-child(2n) {
-  background-color: orange;
+
+ul {
+  width: 100%;
+  height: auto;
+  // background-color: green;
+
+  li {
+    list-style: none;
+    margin: 0 5rem 2rem 5rem;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 3rem;
+    position: relative;
+
+    input {
+      position: absolute;
+      left: 10px;
+    }
+    span {
+      color: $fontW;
+      position: absolute;
+      max-width: 60%;
+    }
+
+    i {
+      position: absolute;
+      right: 10px;
+    }
+  }
 }
-// ToDo list style
-li {
-  list-style: none;
-  margin: 0 5rem 1rem 5rem;
-  display: flex;
-  input {
-    text-align: left;
-  }
-  i {
-    align-items: center;
-  }
+li:nth-child(2n) {
+  color: $clr-tertiary;
+}
+
+.footer {
+  margin-top: 5rem;
+  color: $clr-tertiary;
 }

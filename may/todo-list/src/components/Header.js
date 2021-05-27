@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <h1>
         What are you planing <span>ToDo</span> today?
       </h1>

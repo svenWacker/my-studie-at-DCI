@@ -9,6 +9,7 @@ const ToDos = (props) => {
       />
       <span> {toDo.title}</span>
       <i
+        className="remove"
         onClick={() => {
           console.log(toDo.id);
           props.remove(toDo.id);
