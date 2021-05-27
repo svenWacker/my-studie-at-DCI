@@ -1,34 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import List from "./components/List";
+import ToDos from "./components/ToDos";
 
 function App() {
-  const [userInput, setUserInput] = useState("");
-  const [count, setCount] = useState(0);
-  const spanStyle = { color: "blue", fontSize: "1.4rem", fontWeight: "bold" };
-
-  function handleChange(e) {
-    console.log(e.target.value);
-    setUserInput(e.target.value.trim());
-  }
-
+  const [list, setList] = useState([]);
   return (
-    <div>
-      <form>
-        <input
-          className="userInput"
-          type="text"
-          value={userInput}
-          onChange={handleChange}
-        ></input>
-        <input type="submit" value="Add"></input>
-      </form>
-      {userInput}
-      <br />
-      <p>
-        You clicked <span style={spanStyle}>{count}</span> times
-      </p>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <button onClick={() => setCount(count - 1)}>-</button>
-    </div>
+    <React.Fragment>
+      <Header />
+      <List setList={setList} />
+      <ToDos />
+      <Footer />
+    </React.Fragment>
   );
 }
 
