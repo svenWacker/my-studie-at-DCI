@@ -6,11 +6,24 @@ import ToDos from "./components/ToDos";
 
 function App() {
   const [list, setList] = useState([]);
+  const remove = (itemToRemove) => {
+    const newArr = list.filter((item) => item.id !== itemToRemove);
+    setList(newArr);
+  };
+  const check = (itemToCheck) => {
+    list.filter((item) => {
+      if (item.id === itemToCheck) {
+        item.done = !item.done;
+      }
+      return item;
+    });
+  };
+  console.log(list);
   return (
     <React.Fragment>
       <Header />
       <List setList={setList} />
-      <ToDos />
+      <ToDos list={list} remove={remove} check={check} />
       <Footer />
     </React.Fragment>
   );
