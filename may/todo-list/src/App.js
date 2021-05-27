@@ -18,7 +18,6 @@ function App() {
       return item;
     });
   };
-  console.log(list);
   return (
     <React.Fragment>
       <Header />
