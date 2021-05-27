@@ -27,6 +27,10 @@ body {
 }
 .header {
   color: $clr-secondary;
+  span {
+    color: $clr-tertiary;
+    font-size: 1.2em;
+  }
 }
 
 // Text input
@@ -39,7 +43,6 @@ input[type="text"] {
 ul {
   width: 100%;
   height: auto;
-  // background-color: green;
 
   li {
     list-style: none;
@@ -48,6 +51,10 @@ ul {
     justify-content: space-around;
     margin-left: 3rem;
     position: relative;
+
+    &:nth-child(2n) {
+      color: $clr-tertiary;
+    }
 
     input {
       position: absolute;
@@ -64,9 +71,6 @@ ul {
       right: 10px;
     }
   }
-}
-li:nth-child(2n) {
-  color: $clr-tertiary;
 }
 
 .footer {
