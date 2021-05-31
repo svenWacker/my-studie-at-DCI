@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0,
+    "owner": "Max",
+    "avatar": "🙂",
+    "title": "New post",
+    "text": "Let’s meet up soon 😉",
+    "likes": 222,
+    "comments": 343,
+    "share": 2333,
+    "createdAt": "22-05-2021"
+  },
+  {
+    "id": 1,
+    "owner": "Steel",
+    "avatar": "🙂",
+    "title": "Re-post",
+    "text": "Last night was so 🌶 ",
+    "likes": 234567,
+    "comments": 345678,
+    "share": 6789,
+    "createdAt": "24-05-2021"
+  },
+  {
+    "id": 2,
+    "owner": "Olga",
+    "avatar": "🙂",
+    "title": "New post",
+    "text": "At the Mall 🛍",
+    "likes": 32435,
+    "comments": 243435,
+    "share": 1,
+    "createdAt": "28-05-2021"
+  },
+  {
+    "id": 3,
+    "owner": "Zain",
+    "avatar": "🙂",
+    "title": "Re-post",
+    "text": "Check-in Amsterdam 🇳🇱",
+    "likes": 12,
+    "comments": 33,
+    "share": 0,
+    "createdAt": "28-02-2020"
+  }
+]
