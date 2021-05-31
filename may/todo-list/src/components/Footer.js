@@ -2,7 +2,7 @@ const Footer = () => {
   let year = new Date().getFullYear();
   return (
     <div className="footer">
-      <h4>Copyright ©{year}</h4>
+      <h4>Copyright© {year}</h4>
     </div>
   );
 };

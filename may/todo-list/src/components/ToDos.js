@@ -2,14 +2,12 @@ const ToDos = (props) => {
   const userTodos = props.list.map((toDo, i) => (
     <li key={i}>
       <input
-        class="checked"
         type="checkbox"
         defaultChecked={toDo.done}
         onChange={() => props.check(toDo.id)}
       />
-      <span> {toDo.title}</span>
+      {toDo.title}
       <i
-        className="remove"
         onClick={() => {
           console.log(toDo.id);
           props.remove(toDo.id);
