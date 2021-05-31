@@ -51,6 +51,7 @@ ul {
     justify-content: space-around;
     margin-left: 3rem;
     position: relative;
+    color: $clr-secondary;
 
     &:nth-child(2n) {
       color: $clr-tertiary;
