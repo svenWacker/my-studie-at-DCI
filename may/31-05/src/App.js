@@ -32,9 +32,9 @@ function App() {
         </h2>
         <h4>{text}</h4>
         <div>
-          <span>👍🏻{likes}</span>
-          <span>💬{comments}</span>
-          <span>📨{share}</span>
+          <span>👍🏻 {likes}</span>
+          <span>💬 {comments}</span>
+          <span>📨 {share}</span>
         </div>
       </div>
     );
