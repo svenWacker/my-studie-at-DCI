@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: lightgray;
+  font-family: monospace;
+  padding: 2rem;
+}
+
+.container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  padding: 2rem;
+  margin: auto;
+  font-size: 2rem;
+}
+
+form {
+  margin: auto;
+  padding: 1rem;
+  background: lightgray;
+}
+
+label {
+  font-family: monospace;
+  padding: 1rem 0.5rem;
+  background: orange;
+}
+
+textarea {
+  border: 5px solid orange;
+  padding: 1rem;
+  outline: none;
+}
