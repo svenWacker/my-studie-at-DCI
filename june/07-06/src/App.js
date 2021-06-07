@@ -6,25 +6,26 @@ import React, { useState, useEffect } from "react";
 import List from "./components/List";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count1, setCount1] = useState(0);
+  const [count2, setCount2] = useState(0);
   //const [log, setLog] = useState(false);
   useEffect(() => {
     console.log("I am Ready ");
-  }, []);
+  }, [count1]);
 
   return (
     <React.Fragment>
-      <button onClick={() => setCount(count + 1)}>+</button>
-      <List setCount={setCount} />
-      <h3>{count}</h3>
+      <button onClick={() => setCount1(count1 + 1)}>+</button>
+      <List setCount={setCount1} />
+      <h3>{count1}</h3>
     </React.Fragment>
   );
 }
 /*
 Stop useEffect from running on every render -->> []
 Only Run Once, on Mount -->> []
-Run useEffect on State Change
-Run useEffect When a Prop Changes
+Run useEffect on State Change -->> [...state]
+Run useEffect When a Prop Changes -->> [count]
 */
 export default App;
 
