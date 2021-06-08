@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Loading from "./components/Loading";
 
 const App = () => {
@@ -18,6 +19,11 @@ const App = () => {
 
   function submitHandle(e) {
     e.preventDefault();
+    let TextToUrl = encodeURIComponent(userInput);
+    console.log(TextToUrl);
+    let endPoint = `https://restcountries.eu/rest/v2/name/${textToUrl}`;
+
+    axios(endPoint).then((res) => console.log(res));
   }
 
   if (loading) return <Loading />;
