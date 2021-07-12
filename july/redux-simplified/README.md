@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# REDUX
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## REDUX great resources:
 
-## Available Scripts
+1. [Redux-devtool extension](https://github.com/zalmoxisus/redux-devtools-extension)
+1. [Redux explain like I'm five](https://dev.to/hemanth/explain-redux-like-im-five)
+1. [React-Redux](https://react-redux.js.org/)
+1. [Redux examples](https://redux.js.org/introduction/examples)
+1. []()
 
-In the project directory, you can run:
+## REDUX class examples :
 
-### `npm start`
+1. [Redux basics]() soon
+1. [Redux simplified](https://github.com/Fbw-48/live-coding/tree/main/july/redux-simplified)
+1. [React online shop]() soon
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## REACT step by step:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Actions
+1. Reducers
+1. Store
+1. connect
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. First step Actions
+   in src you will create Directory actions and inside of it index.js
 
-### `npm run build`
+```
+const yourAction = (value) => {
+  return {
+    type: "ACTION_NAME",
+    payload: value
+  };
+};
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Second step Reducers
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+in src you will create Directory reducers and inside of it index.js
 
-### `npm run eject`
+```
+const allReducers = (state, action) => {
+  switch (action.type) {
+    case "ACTION_NAME":
+      return {
+        ...state,
+        // any other modifications you need to do
+      };
+    default:
+      return state;
+  }
+};
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+export default allReducers;
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Third step creating the store
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+in src directory in index.js you should add
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import allReducers from "./reducers";
+// creating the store
+const store = createStore(
+  allReducers,
+  {
+    // any initial values for your store
+  },
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+// adding the Provider wrapper and sending the store variable
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. the last step connect
 
-### Code Splitting
+in any component you need to access the store
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+first import
 
-### Analyzing the Bundle Size
+```
+import { connect } from "react-redux";
+import { // any action you want to dispatch in this component  } from "../actions";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+then send the state and the action the this component through props using this functions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+const mapStateToProps = (store) => {
+// any info you want to pass to this component
+};
+const mapDispatchToProps = {
+ // any actions you need to pass to this component
+};
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Lastly you need to connect Redux with that component
 
-### Deployment
+```
+export default connect(mapStateToProps, mapDispatchToProps)(YourComponent);
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy codding 😎
