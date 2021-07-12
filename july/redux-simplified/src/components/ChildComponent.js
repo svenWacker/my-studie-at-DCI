@@ -15,7 +15,11 @@ const ChildComponent = (props) => {
     </Fragment>
   );
 };
-const mapStateToProps = (store) => {};
+const mapStateToProps = (store) => {
+  return {
+    store,
+  };
+};
 const mapDispatchToProps = { increment, decrement };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChildComponent);
