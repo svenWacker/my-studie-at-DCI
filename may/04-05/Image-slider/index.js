@@ -8,3 +8,4 @@ slider.oninput = () => {
   dragLine.style.left = sliderVal + "%";
   img.style.width = sliderVal + "%";
 };
+// from https://www.codingnepalweb.com/

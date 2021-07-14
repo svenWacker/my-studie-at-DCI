@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import List from "./components/List";
 import ToDos from "./components/ToDos";
+
 function App() {
   const [list, setList] = useState([]);
   const remove = (itemToRemove) => {

@@ -9,7 +9,7 @@ const ChildComponent = (props) => {
   return (
     <Fragment>
       <hr />
-      {store.counter}
+      {store.counter}&nbsp;
       <button onClick={() => increment()}>+</button>
       <button onClick={() => decrement()}>-</button>
     </Fragment>

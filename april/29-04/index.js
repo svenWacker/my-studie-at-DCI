@@ -31,7 +31,7 @@ header.addEventListener("mouseleave", reset);
 function keyUp(e) {
   console.log(e);
   this.style.backgroundColor = "orange";
-  if (e.code == "KeyS") alert("You are cool");
+  if (e.code == "KeyS" || "KeyH") alert("You are cool");
 }
 function keyDown(e) {
   this.style.backgroundColor = "blue";
