@@ -38,8 +38,17 @@ fs.writeFile("./text/new.txt", "This is file created in NodeJs", (err) => {
 function sum(numArray) {
   return numArray.reduce((sum, n) => sum + n, 0);
 }
+function min(numArray) {
+  return numArray.reduce((sum, n) => sum - n, 0);
+}
 function avg(numArray) {
   return sum(numArray) / numArray.length;
+}
+function mul(numArray) {
+  return numArray.reduce((mul, n) => mul * n, 1);
+}
+function div(numArray) {
+  return numArray.reduce((div, n) => div / n);
 }
 
 function parsNum(arg) {
@@ -61,8 +70,17 @@ function med(numArray) {
     case "sum":
       console.log(sum(numArray));
       break;
+    case "min":
+      console.log(min(numArray));
+      break;
     case "avg":
       console.log(avg(numArray));
+      break;
+    case "mul":
+      console.log(mul(numArray));
+      break;
+    case "div":
+      console.log(div(numArray));
       break;
     default:
       console.log("I can not do this task yet, please write sum or avg");
