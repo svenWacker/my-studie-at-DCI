@@ -1,4 +1,5 @@
 const fs = require("fs");
+const math = require("./math");
 // create file
 // writeFile will create or over write
 
@@ -45,3 +46,10 @@ fs.open("newText.txt", "w", (err, data) => {
   if (err) throw err;
   console.log("File is opened, Done ✅");
 });
+
+console.log(math);
+let x = 3;
+let y = 4;
+console.log(`x + y = ${math.sum(x, y)}`);
+console.log(`x - y = ${math.sub(x, y)}`);
+console.log(`x * y = ${math.multi(x, y)}`);
