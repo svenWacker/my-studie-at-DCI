@@ -7,3 +7,8 @@ exports.showHelp = () => {
         `;
   console.log(helpText);
 };
+
+exports.showVersion = () => {
+  const text = "1.0.0v";
+  console.log(text);
+};
