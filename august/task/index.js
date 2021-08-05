@@ -9,9 +9,6 @@ if (args.includes("-v")) {
   showVersion();
 }
 
-// const args = process.argv.slice(2);
-// console.log(args);
-
 prepareString = (str) => {
   let newArray = str.map((word) => {
     let fixedWord = word.trim();
