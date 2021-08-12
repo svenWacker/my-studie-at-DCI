@@ -49,7 +49,7 @@ app.get("/add", async (req, res) => {
   const id = req.query.id;
   const title = req.query.title;
   db.get("articles").push({ id: id, title: title }).write();
-  res.send(`New data being entered id:${id} title${title}:`);
+  res.send(`New data being entered id:${id} title:${title}`);
 });
 
 // find
@@ -67,6 +67,19 @@ app.get("/find", async (req, res) => {
   res.send(text);
 });
 // update
+app.get("/update", async (req, res) => {
+  //url /update
+  await db.update("num", (n) => n + 1).write();
+  const num = db.get("num").value();
+  res.send(`num was updated to ${num}`);
+});
+
+app.get("/user", async (req, res) => {
+  //url /user?name=Sven
+  const name = req.query.name;
+  await db.set("user.name", name).write();
+  res.send(`Hey ${name}`);
+});
 
 // delete
 
