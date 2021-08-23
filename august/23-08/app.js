@@ -12,6 +12,9 @@ const DB_URL = process.env.DB_URL;
 mongoose
   .connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(console.log("DB is connected"))
-  .catch((error) => console.log("There is a problem"));
+  .catch((error) => console.log("There is a problem: ${error.message}"));
+
+const employees = require("./router/employees");
+app.use("/employees", employees);
 
 module.exports = app;
