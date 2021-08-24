@@ -56,9 +56,43 @@ async function getEmployee(req, res, next) {
 }
 
 // Get one employee
-// url http://localhost:5000/employees/Sven
 router.get("/:name", getEmployee, (req, res) => {
+  // url http://localhost:5000/employees/Sven
   res.status(200).json(res.employee);
+});
+
+// Delete one employee
+router.delete("/:name", getEmployee, async (req, res) => {
+  // url http://localhost:5000/employees/Sven
+  try {
+    await res.employee.remove();
+    res.status(200).json({ message: "Employee Deleted" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Patch one employee
+router.patch("/:name", getEmployee, async (req, res) => {
+  console.log(req.body);
+  console.log(res.employee);
+  if (req.body.name) {
+    res.employee.name = req.body.name;
+  }
+  if (req.body.age) {
+    res.employee.age = req.body.age;
+  }
+  if (req.body.add) {
+    //           Berlin
+    res.employee.add = req.body.add;
+  }
+  console.log(res.employee);
+  try {
+    await res.employee.save();
+    res.status(200).json({ message: "Employee updated", data: res.employee });
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
 });
 
 module.exports = router;
