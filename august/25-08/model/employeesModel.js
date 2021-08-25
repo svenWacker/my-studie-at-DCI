@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const employeesDataSchema = new mongoose.Schema({
   name: {
     type: String,
-    // to make it required
-    trim: true,
     // to trim
+    trim: true,
+    // to make it required
     required: true,
   },
   age: {
