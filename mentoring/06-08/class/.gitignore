@@ -1,0 +1,8 @@
+# Only for mac 
+.DS_Store
+
+# VS code config
+.vscode/ 
+
+node_modules
+
