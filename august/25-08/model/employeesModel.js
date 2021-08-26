@@ -5,11 +5,13 @@ const employeesDataSchema = new mongoose.Schema({
     // to trim
     trim: true,
     // to make it required
-    required: true,
+    required: [true, "Name is must"],
+    // unique: true,
   },
   age: {
     type: Number,
-    required: true,
+    //required: true,
+    required: [true, "Write age please"],
   },
   // short way
   add: String,

@@ -90,9 +90,10 @@ const updateOneEmployee = async (req, res) => {
   try {
     // save
     await res.employee.save();
+    // 200 for Successful OK
     res.status(200).json({ message: "Employee updated", data: res.employee });
   } catch (err) {
-    // 400 for bad request
+    // 400 for Bad request
     res.status(400).json({ message: err.message });
   }
 };
@@ -129,7 +130,7 @@ const deleteOneEmployee = async (req, res) => {
     });
   }
 };
-// PUT
+// PUT AKA Update one Employee upon criteria
 const updateAllEmployeeData = async (req, res) => {
   try {
     await EmployeesData.updateOne(
@@ -151,6 +152,10 @@ const updateAllEmployeeData = async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 };
+
+// Update All Employee  upon criteria
+
+const updateManyEmployees = async (req, res) => {};
 
 module.exports = {
   getEmployee,
