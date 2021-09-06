@@ -4,7 +4,7 @@ const morgan = require("morgan");
 app.use(morgan("dev"));
 app.use(express.json());
 
-//const UserModel = require("./model/user");
+const UserModel = require("./model/user");
 
 const mongoose = require("mongoose");
 mongoose
