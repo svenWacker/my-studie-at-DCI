@@ -42,9 +42,10 @@
         <%for(let i=0;i< data.length;i++){%>
         <tr>
           <td><%=i%></td>
-          <td><img src="<%=data[i].imageUrl%>" alt="Avatar" /></td>
+          <td><img src="<%= data[i].avatar%>" alt="Avatar" /></td>
           <td><%=data[i].firstName%></td>
           <td><%=data[i].lastName%></td>
+          <td><%=data[i].city%></td>
         </tr>
         <%}%>
       </tbody>

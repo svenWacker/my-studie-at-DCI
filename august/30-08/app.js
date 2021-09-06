@@ -42,7 +42,8 @@ app.post("/", (req, res) => {
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       city: faker.address.city(),
-      imageUrl: faker.image.imageUrl(),
+      avatar: faker.image.avatar(),
+      // imageUrl: faker.image.imageUrl(300,300,"avatar", true, true),
     });
     try {
       fakeData.save();
@@ -52,5 +53,5 @@ app.post("/", (req, res) => {
   }
   res.redirect("/");
 });
-
+console.log(faker.image.imageUrl(300, 300, "avatar", true, true));
 module.exports = app;
