@@ -8,8 +8,6 @@ To start new express project
  npm i morgan
  npm i express-validator
  npm i express-handlebars
- npm i express-session
- npm i cookie-parser
  npm i nodemon --save-dev
  touch server.js app.js
  mkdir views

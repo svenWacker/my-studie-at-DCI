@@ -1,14 +1,43 @@
 <h1>{{title}}</h1>
-{{#if errors}}
+{{#if done}}
   <div>
-    <ul>
-      {{#each errors}}
-        {{! errors.map(err => err aka this)}}
-        <li>{{this.msg}}</li>
-      {{/each}}
-    </ul>
+    <h4>Every thing is cool 👍🏻</h4>
+    <a href="/">Sign up again</a>
   </div>
+{{else}}
+  {{#if errors}}
+    <div>
+      <ul>
+        {{#each errors}}
+          {{! errors.map(err => err aka this)}}
+          <li>{{this.msg}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+  <form method="POST" action="/submit">
+    <label for="email">
+      <input type="email" id="email" name="email" placeholder="Your email" />
+    </label>
+    <label for="pass">
+      <input
+        type="password"
+        id="pass"
+        name="pass"
+        placeholder="Your password"
+      />
+    </label>
+    <label for="passConf">
+      <input
+        type="password"
+        id="passConf"
+        name="passConf"
+        placeholder="Conf pass"
+        required
+      />
+    </label>
+    <label for="submit">
+      <input type="submit" id="submit" value="Send" />
+    </label>
+  </form>
 {{/if}}
-<form method="POST" action="/submit">
-
-</form>
