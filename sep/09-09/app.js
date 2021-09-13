@@ -16,11 +16,18 @@ mongoose
   .catch((err) => {
     console.log(`There was error ${err.message}`);
   });
-//const bookController = require("./controller/bookController");
+const bookController = require("./controller/bookController");
 
 // GET all
 // POST new author
+app.route("/").get(bookController.getAll).post(bookController.addNewAuthor);
 // GET one by id
 // DELETE one by id
+app
+  .route("/:id")
+  .get(bookController.getOneByID)
+  .delete(bookController.deleteOneByID);
 
+// PUT later
+// PATCH later
 module.exports = app;
