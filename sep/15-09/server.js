@@ -16,7 +16,7 @@ To start new express project
  npm i multer
  npm i nodemon --save-dev
  touch server.js app.js
- mkdir models controllers views routes
+ mkdir models controllers views routes uploads
  mkdir views/layouts
  touch models/userModel.js
  touch models/sessionModel.js
