@@ -1,0 +1,31 @@
+{{#if data}}
+  <div>
+    <table border="1">
+      <tr>
+        <td>ID</td>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Avatar</th>
+      </tr>
+
+      {{#each data}}
+        <tr>
+          <td>{{this._id}}</td>
+          <td>{{this.username}}</td>
+          <td>{{this.password}}</td>
+          <td>{{this.role}}</td>
+          <td><img
+              src="http://localhost:5000/{{this.avatar}}"
+              alt="{{this.username}}"
+              width="100px"
+            /></td>
+        </tr>
+      {{/each}}
+    </table>
+    <a href="/">Go back</a>
+  </div>
+{{else}}
+  <h4>Sorry something went wrong</h4>
+  <a href="/">Go back</a>
+{{/if}}

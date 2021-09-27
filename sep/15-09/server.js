@@ -9,8 +9,8 @@ To start new express project
  npm i mongoose
  npm i bcrypt
  npm i cookie-parser
- npm i express-handlebars
  npm i express-session
+ npm i express-handlebars
  npm i express-validator
  npm i uuid
  npm i multer

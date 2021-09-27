@@ -1,10 +1,17 @@
-<h1>{{title}}</h1>
+<h1>{{title}} {{username}}</h1>
 {{#if done}}
+  <img
+    src="http://localhost:5000/{{avatar}}"
+    alt="{{username}}"
+    width="100px"
+  />
+
+  <h4>Check your <a href="/user/view/{{username}}">profile</a></h4>
   <a href="/logout">Logout</a>
 {{else}}
   <form method="POST" action="/login">
-    <label for="userName">
-      <input type="text" name="userName" id="userName" placeholder="Username" />
+    <label for="username">
+      <input type="text" name="username" id="username" placeholder="Username" />
     </label>
     <label for="password">
       <input

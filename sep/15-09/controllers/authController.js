@@ -25,5 +25,16 @@ allowedAccess.allowedToView = async (req, res, next) => {
     return res.status(401).send("NOT Allowed <br> <a href='/'>Home</a>");
   }
 };
+allowedAccess.loggedStatus = (req, res, next) => {
+  if (req.cookies.session_id) {
+    req.title = "You are already logged in";
+    req.done = true;
+  } else {
+    // this is only for our small app :)
+    req.title = req.path == "/" ? "Welcome" : "Login";
+    req.done = false;
+  }
+  next();
+};
 
 module.exports = allowedAccess;

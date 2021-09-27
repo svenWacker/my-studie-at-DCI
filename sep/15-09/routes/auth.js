@@ -2,16 +2,18 @@ const express = require("express");
 const router = express.Router();
 const userControllers = require("../controllers/userController");
 const multer = require("multer");
+const allowedAccess = require("../controllers/authController");
+//const { body, validationResult } = require("express-validator");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
+    // function to check
     cb(null, "./uploads/");
   },
   filename: function (req, file, cb) {
     cb(null, new Date().toISOString() + file.originalname);
   },
 });
-console.log(new Date().toISOString());
 const upload = multer({
   storage: storage,
   limits: { fileSize: 1024 * 1024 * 10 },
@@ -28,10 +30,10 @@ const upload = multer({
   },
 });
 
-router.get("/", (req, res) => {
+router.get("/", allowedAccess.loggedStatus, (req, res) => {
   res.render("index", {
-    title: "Welcome",
-    done: false,
+    title: req.title,
+    done: req.done,
     errors: req.session.errors,
   });
   req.session.errors = null;
@@ -39,28 +41,16 @@ router.get("/", (req, res) => {
 // register
 router.post("/register", upload.single("avatar"), userControllers.addUser);
 // login
-router.get("/login", (req, res) => {
-  // This if statement can be done in middleware to check if the user logged in or not
-
-  if (req.cookies.session_id) {
-    res.send("You ar e already logged in <br> <a href='/logout'>logout</a>");
-  }
+router.get("/login", allowedAccess.loggedStatus, (req, res) => {
   res.render("login", {
-    title: "login",
-    done: false,
+    title: req.title,
+    done: req.done,
     errors: req.session.errors,
   });
   req.session.errors = null;
 });
 router.post("/login", userControllers.login);
 // logout
-router.get("/logout", (req, res) => {
-  if (req.cookies && req.cookies.session_id) {
-    res.clearCookie("session_id");
-    res.clearCookie("role");
-    res.clearCookie("user_id");
-  }
-  res.redirect("/");
-});
+router.get("/logout", userControllers.logout);
 
 module.exports = router;

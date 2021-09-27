@@ -2,20 +2,24 @@
 {{#if done}}
   <div>
     <h4>Every thing is cool</h4>
+    If you want
+    <a href="/logout">logout</a>
   </div>
 {{else}}
   {{#if errors}}
     <div>
       <ul>
         {{#each errors}}
+          {{!    error == this}}
           <li>{{this.msg}}</li>
         {{/each}}
       </ul>
     </div>
   {{/if}}
+
   <form method="POST" action="/register" enctype="multipart/form-data">
-    <label for="userName">
-      <input type="text" name="userName" id="userName" placeholder="Username" />
+    <label for="username">
+      <input type="text" name="username" id="username" placeholder="Username" />
     </label>
     <label for="password">
       <input
